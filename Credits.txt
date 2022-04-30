@@ -1,0 +1,14 @@
+@Credits
+
+1. Zombie assets by Pxltiger
+   https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232
+
+2. Standard Assets(for Unity 2018.4) by Unity Technologies
+   https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2018-4-32351
+
+3. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
+   https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s
+   https://www.youtube.com/watch?v=1H9jrKyWKs0
+
+4. I have get ideas from  Youtuber 'Dev/GameDevelopment's  tutorials
+   https://www.youtube.com/watch?v=UjkSFoLxesw&t=7s
