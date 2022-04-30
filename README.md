@@ -2,6 +2,7 @@
 ![Zombie AI](https://img.shields.io/badge/zombie-ai-red)
 
 # Zombie AI
+See [Youtube](https://www.youtube.com/watch?v=486w7NuyBWo) Video
 
 [![YouTube Video](https://i9.ytimg.com/vi/486w7NuyBWo/mq2.jpg?sqp=CIiTtpMG&rs=AOn4CLDYcXD9-WMHC7omsL8OkyqNQWLa1g)](https://www.youtube.com/watch?v=486w7NuyBWo)
 
@@ -27,6 +28,8 @@ The NPC Debug is showing by enabling 'DebugNavmeshAgent' and you can see Vison S
 
 
 Build Date : 30.04.2022
+
+Licensing : [GNU General Public License v3.0](/LICENSE)
 
 Version : 1.0.0
 
