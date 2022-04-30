@@ -15,8 +15,6 @@ this Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com
 You just need to download this repo and put inside of your project asset folder.
 
 
-So You need to download those two packages from Unity assets store along with this Zombie_Enemy_AI assets.
-
 You may get some error in Unity Standard assets like 'GUITEXT'
 you need to fix that issue by putting 'using Unity.Engine.UI' and replace 'GUITEXT' with 'TEXT'.
 
