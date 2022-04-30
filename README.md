@@ -6,8 +6,8 @@ See [Youtube](https://www.youtube.com/watch?v=486w7NuyBWo) Video
 
 [![YouTube Video](https://i9.ytimg.com/vi/486w7NuyBWo/mq2.jpg?sqp=CIiTtpMG&rs=AOn4CLDYcXD9-WMHC7omsL8OkyqNQWLa1g)](https://www.youtube.com/watch?v=486w7NuyBWo)
 
-![Screenshot](/Zombie_Ai/Screenshoots/NPC_With_Debug_sensor.png)
-![Screenshot](/Zombie_Ai/Screenshoots/NPCAgents_depending_scripts.png)
+![Screenshot](/_Zombie_Ai/Screenshoots/NPC_With_Debug_sensor.png)
+![Screenshot](/_Zombie_Ai/Screenshoots/NPCAgents_depending_scripts.png)
 
 Although I have put all necessary files in this package but
 this Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232) and
