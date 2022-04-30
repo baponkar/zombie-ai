@@ -23,12 +23,19 @@ The NPC control configaration can be control by 'NPC Agent Config' Asset menu.
 
 The NPC Debug is showing by enabling 'DebugNavmeshAgent' and you can see Vison Sensor and Sound Sensor.
 
+
 Build Date : 30.04.2022
+
 Version : 1.0.0
+
 Platform : Unity Engine 2020.3.15f2
+
 Writer : Bapon Kar
+
 Last Update : 30.04.2022
+
 Contact : [email](trynewz60@gmail.com), [github](https://github.com/baponkar)
+
 
 Thankyou for downloading this assets.
 
