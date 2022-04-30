@@ -5,8 +5,10 @@
 
 [![YouTube Video](https://i9.ytimg.com/vi/486w7NuyBWo/mq2.jpg?sqp=CIiTtpMG&rs=AOn4CLDYcXD9-WMHC7omsL8OkyqNQWLa1g)](https://www.youtube.com/watch?v=486w7NuyBWo)
 
-This Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232) and
- ['Standard Assets(for Unity 2018.4) by Unity Technologies'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
+Although I have put all necessary files in this package but
+this Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232) and
+ ['Standard Assets(for Unity 2018.4) by Unity Technologies'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232).
+You just need to download this repo and put inside of your project asset folder.
 
 
 So You need to download those two packages from Unity assets store along with this Zombie_Enemy_AI assets.
