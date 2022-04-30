@@ -5,7 +5,7 @@
 
 [![YouTube Video](https://i9.ytimg.com/vi/486w7NuyBWo/mq2.jpg?sqp=CIiTtpMG&rs=AOn4CLDYcXD9-WMHC7omsL8OkyqNQWLa1g)](https://www.youtube.com/watch?v=486w7NuyBWo)
 
-This Assets depend on !['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232) and
+This Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232) and
  !['Standard Assets(for Unity 2018.4) by Unity Technologies'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
 
 
@@ -28,7 +28,7 @@ Version : 1.0.0
 Platform : Unity Engine 2020.3.15f2
 Writer : Bapon Kar
 Last Update : 30.04.2022
-Contact : ![email]trynewz60@gmail.com, ![github](https://github.com/baponkar)
+Contact : [email](trynewz60@gmail.com), [github](https://github.com/baponkar)
 
 Thankyou for downloading this assets.
 
