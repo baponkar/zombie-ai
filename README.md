@@ -1,7 +1,7 @@
 # Gaming Jam Zombie AI
 
 This Assets depend on 'Zombie assets by Pxltiger' and 'Standard Assets(for Unity 2018.4) by Unity Technologies'
-
+![YouTube Video link](https://www.youtube.com/watch?v=486w7NuyBWo)
 So You need to download those two packages from Unity assets store along with this Zombie_Enemy_AI assets.
 Download link 	
 Zombie : https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232
