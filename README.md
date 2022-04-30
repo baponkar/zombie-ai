@@ -1,6 +1,6 @@
 ![Unity 2020 Badge](https://img.shields.io/badge/Unity-2020-blue)
 ![Zombie AI](https://img.shields.io/badge/zombie-ai-red)
-
+![C#](https://img.shields.io/badge/C-%23-lightgrey)
 # Zombie AI
 See [Youtube](https://www.youtube.com/watch?v=486w7NuyBWo) Video
 
