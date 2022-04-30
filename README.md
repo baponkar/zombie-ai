@@ -29,7 +29,7 @@ The NPC Debug is showing by enabling 'DebugNavmeshAgent' and you can see Vison S
 
 Build Date : 30.04.2022
 
-Licensing : [GNU General Public License v3.0](/LICENSE)
+Licensing : [GNU General Public License v3.0](/LICENSE.txt)
 
 Version : 1.0.0
 
