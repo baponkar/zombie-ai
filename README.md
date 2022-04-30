@@ -18,8 +18,18 @@ You just need to download this repo and put inside of your project asset folder.
 You may get some error in Unity Standard assets like 'GUITEXT'
 you need to fix that issue by putting 'using Unity.Engine.UI' and replace 'GUITEXT' with 'TEXT'.
 
-This asssets has a Zombie NPC which have Patrol,Idle,Chase Player, Attack and Death State.
-It also has ability to call other near NPC for help to attack Player.
+This asssets has a Zombie NPC which have following abilities
+
+- [x] Patrol
+- [x] Idle
+- [x] Chase Player
+- [x] Attack Player
+- [x] Death State.
+- [x] Vison Sensor
+- [x] Sound Sensor
+- [x] Calling other near NPC  to attack Player
+
+
 Which sensed Player by Vision Sensor and sound sensor.It can call other near NPC to attack Player.
 
 If Player has attached PlayerHealth Script  then it can make damage to the player health.
