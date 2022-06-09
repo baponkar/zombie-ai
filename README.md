@@ -37,6 +37,8 @@ The NPC control configaration can be control by 'NPC Agent Config' Asset menu.
 
 The NPC Debug is showing by enabling 'DebugNavmeshAgent' and you can see Vison Sensor and Sound Sensor.
 
+* One thing that the NPC are Navmesh Agent so it's need to Bake NavMesh on the static surface.
+
 
 Build Date : 30.04.2022
 
