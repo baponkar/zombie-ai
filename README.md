@@ -44,15 +44,12 @@ GNU GPL v-3.0 License
 4. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
 
 ## Dependency
-1. This Assets depend on 'Zombie assets by Pxltiger'.
+1. This Assets depend on ['Zombie assets by Pxltiger']((https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)).
 So You need to download this package from Unity assets store along with this Zombie_Enemy_AI assets.
-Download link [Zombie](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
 
-2. ProGrids
 
-3. ProBuilder
 
-4. [Standard-Assets-Characters](https://github.com/Unity-Technologies/Standard-Assets-Characters)
+2. [Standard-Assets-Characters](https://github.com/Unity-Technologies/Standard-Assets-Characters)
 I am using Audio files for footstep sound.
 
 ## Unity Version
