@@ -34,7 +34,18 @@ It has roughly following Characteristics:
 ## Doc :
 This is complete Unity Project if You download this project and open it then it will works perfectly.
 If you use this project with your old project then first put 'Asset' folder in your project.
+Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.
 
+1. NPC  : Change Default layer to NPC layer on Zombie Prefab.
+2. Player : Change Default layer to Player layer on Player Prefab.
+3. Ground : Change Default layer to Ground layer on Ground Plain or Terrain or like that envirionment object.
+4. Change Vision Sensor(Which attached to the Zombie Prefab)'s target layer to 'Player'.
+5. Change All Occulation layer of Vision Sensor(Which attached to the Zombie Prefab) to Default,Ground etc all occulation layer have in your scene.
+6. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
+7. Now put zombie prefab and player prefab in your scene.Player has attached a Health script which is damageable by Zombie.
+8. Zombie also has attached a Health Script which can be damagable by external player which has a weapon which can be used to damage zombies health.
+
+* This Project has a Demo Scene with necessary setup.
 ## License:
 [GNU GPL v-3.0 License](LICENSE.md)
 
