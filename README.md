@@ -1,0 +1,63 @@
+![Unity 2020 Badge](https://img.shields.io/badge/Unity-2020-blue)
+![FPS](https://img.shields.io/badge/FPS-for%20Unity-blue)
+![C#](https://img.shields.io/badge/C-%23-lightgrey)
+
+
+
+# <span style="color:blue">Zombie AI for Unity Engine </span>.
+A  Zombie NPC Unity Project with a Demo Scene.See [this](https://www.youtube.com/watch?v=JxbXT3MU_9M) Demo Video.
+
+It has roughly following Characteristics:
+
+- [x] Zombie - Idle
+- [x] Zombie - Chase Player
+- [x] Zombie - Patrolling
+- [x] Zombie - Attack
+- [x] Zombie - Dead
+- [x] Zombie - Call Near NPC to attack Player
+- [x] Zombie - Sound Sensor
+- [x] Zombie - Vison Sensor
+- [x] FPS Player
+- [x] A Demo Scene
+- [x] Walking Audio 
+- [x] Camera Shake
+
+
+## ![ScreenShots1](Screenshots/Screenshot1.jpg)
+
+
+## Doc :
+This is complete Unity Project if You download this project and open it then it will works perfectly.
+If you use this project with your old project then first put 'Asset' folder in your project.
+
+## License:
+GNU GPL v-3.0 License
+
+## Credits :
+1. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
+   https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s
+   https://www.youtube.com/watch?v=1H9jrKyWKs0
+
+3. I have get ideas from  Youtuber 'Dev/GameDevelopment's  tutorials
+   https://www.youtube.com/watch?v=UjkSFoLxesw&t=7s
+   
+4. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
+
+## Dependency
+1. This Assets depend on 'Zombie assets by Pxltiger'.
+So You need to download this package from Unity assets store along with this Zombie_Enemy_AI assets.
+Download link [Zombie](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
+
+2. ProGrids
+
+3. ProBuilder
+
+4. [Standard-Assets-Characters](https://github.com/Unity-Technologies/Standard-Assets-Characters)
+I am using Audio files for footstep sound.
+
+## Unity Version
+Unity 2020.3.15f2 or higher version.
+
+## Contact
+![Twitter](https://img.shields.io/twitter/follow/kar_bapon?style=social)
+![Github](https://img.shields.io/github/followers/baponkar?style=social)

@@ -1,0 +1,12 @@
+@Credits
+
+1. Zombie assets by Pxltiger
+   https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232
+
+
+2. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
+   https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s
+   https://www.youtube.com/watch?v=1H9jrKyWKs0
+
+3. I have get ideas from  Youtuber 'Dev/GameDevelopment's  tutorials
+   https://www.youtube.com/watch?v=UjkSFoLxesw&t=7s
