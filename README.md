@@ -51,11 +51,9 @@ GNU GPL v-3.0 License
 ## Dependency
 1. This Assets depend on ['Zombie assets by Pxltiger']((https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)).
 So You need to download this package from Unity assets store along with this Zombie_Enemy_AI assets.
-
-
-
 2. [Standard-Assets-Characters](https://github.com/Unity-Technologies/Standard-Assets-Characters)
 I am using Audio files for footstep sound.
+3. [Unity Simple FPS](https://github.com/baponkar/Unity-Simple-FPS) by me.
 
 ## Unity Version
 Unity 2020.3.15f2 or higher version.
