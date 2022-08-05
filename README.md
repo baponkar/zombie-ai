@@ -5,7 +5,7 @@
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
 ![star](https://img.shields.io/github/stars/baponkar/zombie-ai)
 ![License](https://img.shields.io/github/license/baponkar/zombie-ai)
-![]
+
 
 
 
