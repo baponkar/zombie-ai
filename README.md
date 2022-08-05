@@ -23,7 +23,7 @@ It has roughly following Characteristics:
 - [x] Camera Shake
 
 
-## ![ScreenShots1](Screenshots/Screenshot1.jpg)
+## ![ScreenShots1](\ScreenShots\Screenshot1.png)
 
 
 ## Doc :
@@ -35,11 +35,11 @@ GNU GPL v-3.0 License
 
 ## Credits :
 1. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
-   https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s
-   https://www.youtube.com/watch?v=1H9jrKyWKs0
+   [1](https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s)
+   [2](https://www.youtube.com/watch?v=1H9jrKyWKs0)
 
-3. I have get ideas from  Youtuber 'Dev/GameDevelopment's  tutorials
-   https://www.youtube.com/watch?v=UjkSFoLxesw&t=7s
+3. I have get ideas from  Youtuber ['Dev/GameDevelopment'](https://www.youtube.com/watch?v=UjkSFoLxesw&t=7s)s  tutorials
+   
    
 4. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
 
