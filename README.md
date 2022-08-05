@@ -23,7 +23,7 @@ It has roughly following Characteristics:
 - [x] Camera Shake
 
 
-## ![ScreenShots1](\ScreenShots\Screenshot1.png)
+## ![ScreenShots1](ScreenShots\Screenshot1.png)
 
 
 ## Doc :
