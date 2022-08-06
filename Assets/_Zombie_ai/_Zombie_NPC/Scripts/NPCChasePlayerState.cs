@@ -7,9 +7,7 @@ namespace baponkar.npc.zombie
 {
     public class NPCChasePlayerState : NPCState
     {
-        
-        float timer = 0.0f;
-
+        float timer;
         public NPCStateId GetId()
         {
             return NPCStateId.ChasePlayer;
@@ -19,6 +17,7 @@ namespace baponkar.npc.zombie
         {
             agent.playerSeen = true;
             agent.isChaseing = true;
+            agent.navMeshAgent.isStopped = false;
             agent.navMeshAgent.stoppingDistance = agent.config.attackRadius;
         }
 
@@ -26,6 +25,7 @@ namespace baponkar.npc.zombie
         {
             agent.isChaseing = false;
             agent.navMeshAgent.stoppingDistance = 0.0f;
+            agent.navMeshAgent.isStopped = false;
         }
 
         void NPCState.Update(NPCAgent agent)
@@ -38,19 +38,34 @@ namespace baponkar.npc.zombie
             else
             {
                 if(!agent.navMeshAgent.hasPath){
-                    //agent.navMeshAgent.speed = agent.config.chaseWalkingSpeed + agent.config.offsetChaseSpeed;
                     if(timer <= 0.0f){
-                        agent.navMeshAgent.SetDestination(agent.playerTransform.position);
-                        timer = agent.config.waitTime;
+                        if(agent.targetingSystem.TargetPosition != null)
+                        {
+                            agent.navMeshAgent.SetDestination(agent.targetingSystem.TargetPosition);
+                            timer = agent.config.waitTime;
+                        }
                     }
                 }
                 else
                 {
                     if(timer <= 0.0f)
                     {
-                        ChasePlayer(agent);
+                        //ChasePlayer(agent);
+                        if(agent.targetingSystem.HasTarget)
+                        {
+                            agent.navMeshAgent.SetDestination(agent.targetingSystem.TargetPosition);
+                        }
+                        else
+                        {
+                            agent.stateMachine.ChangeState(NPCStateId.Patrol);
+                        }
                         timer = agent.config.waitTime;
                     }
+                }
+
+                if(agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.Attack);
                 }
             }
         }
@@ -58,20 +73,27 @@ namespace baponkar.npc.zombie
         private static void ChasePlayer(NPCAgent agent)
         {
             PlayerHealth playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
-            float distance = Vector3.Distance(playerHealth.transform.position, agent.transform.position);
-
-            if (distance > agent.config.attackRadius)
+            if(agent.targetingSystem.HasTarget)
             {
-                agent.animator.SetBool("isAttacking", false);
-                agent.navMeshAgent.isStopped = false;
-                //agent.navMeshAgent.speed = agent.config.chaseWalkingSpeed + agent.config.offsetChaseSpeed;
-                agent.navMeshAgent.destination = agent.playerTransform.position;
+                float distance = Vector3.Distance(agent.targetingSystem.TargetPosition, agent.transform.position);
+                if (distance > agent.config.attackRadius)
+                {
+                    agent.animator.SetBool("isAttacking", false);
+                    //agent.navMeshAgent.speed = agent.config.chaseWalkingSpeed + agent.config.offsetChaseSpeed;
+                    agent.navMeshAgent.destination = agent.targetingSystem.TargetPosition;
+                }
+                else
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.Attack);
+                }
             }
             else
             {
-                agent.navMeshAgent.isStopped = true;
-                agent.stateMachine.ChangeState(NPCStateId.Attack);
+                agent.stateMachine.ChangeState(NPCStateId.Patrol);
             }
+            
+
+            
             
             if(playerHealth.isDead)
             {

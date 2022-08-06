@@ -194,5 +194,24 @@ namespace baponkar.npc.zombie
                 }
             }
         }
+
+        public int Filter(GameObject [] buffer, string layerName)
+        {
+            int layer = LayerMask.NameToLayer(layerName);
+            int count  = 0;
+            foreach(var obj in Objects)
+            {
+                if(obj.layer == layer)
+                {
+                    buffer[count] = obj;
+                    ++count;
+                }
+                if(buffer.Length == count)
+                {
+                    break; //buffer is full
+                }
+            }
+            return count;
+        }
     }
 }

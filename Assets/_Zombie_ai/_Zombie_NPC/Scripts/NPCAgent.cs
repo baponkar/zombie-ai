@@ -37,6 +37,8 @@ using baponkar.npc.zombie;
         public Animator animator;
         [HideInInspector]
         public CapsuleCollider capsuleCollider;
+        [HideInInspector]
+        public NPCTargetingSystem targetingSystem;
         
         [Header("NPC Zombie Agent.")]
         public bool isIdleing;
@@ -63,6 +65,7 @@ using baponkar.npc.zombie;
             aiHealth = GetComponent<Health>();
             animator = GetComponentInChildren<Animator>();
             capsuleCollider = GetComponent<CapsuleCollider>();
+            targetingSystem = GetComponent<NPCTargetingSystem>();
             
             stateMachine = new NPCStateMachine(this);
             stateMachine.RegisterState(new NPCChasePlayerState());

@@ -22,6 +22,7 @@ It has roughly following Characteristics:
 - [x] Zombie - Call Near NPC to attack Player
 - [x] Zombie - Sound Sensor
 - [x] Zombie - Vison Sensor
+- [x] Sensor Memory for Target
 - [x] FPS Player
 - [x] A Demo Scene
 - [x] Walking Audio 
@@ -37,9 +38,9 @@ If you use this project with your old project then first put 'Asset' folder in y
 Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.
 
 1. NPC  : Change Default layer to NPC layer on Zombie Prefab.
-2. Player : Change Default layer to Player layer on Player Prefab.
+2. Player : Change Default layer to Character layer on Player Prefab.
 3. Ground : Change Default layer to Ground layer on Ground Plain or Terrain or like that envirionment object.
-4. Change Vision Sensor(Which attached to the Zombie Prefab)'s target layer to 'Player'.
+4. Change Vision Sensor(Which attached to the Zombie Prefab)'s target layer to 'Character'.
 5. Change All Occulation layer of Vision Sensor(Which attached to the Zombie Prefab) to Default,Ground etc all occulation layer have in your scene.
 6. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
 7. Now put zombie prefab and player prefab in your scene.Player has attached a Health script which is damageable by Zombie.

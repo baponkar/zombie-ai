@@ -14,11 +14,12 @@ namespace baponkar.npc.zombie
         void NPCState.Enter(NPCAgent agent)
         {
             agent.isIdleing = true;
+            agent.navMeshAgent.isStopped = true;
         }
 
         void NPCState.Update(NPCAgent agent)
         {
-            if(!agent.aiHealth.isDead  && findThePlayer(agent))
+            if(!agent.aiHealth.isDead  && agent.targetingSystem.TargetInSight)
             {
                 agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
             }
@@ -33,12 +34,12 @@ namespace baponkar.npc.zombie
                 agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
             }
 
-            agent.navMeshAgent.isStopped = true;
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
             agent.isIdleing = false;
+            agent.navMeshAgent.isStopped = false;
         }
 
         

@@ -17,6 +17,8 @@ namespace baponkar.npc.zombie
 
         RaycastHit hit;
 
+        
+
         public NPCStateId GetId()
         {
             return NPCStateId.Attack;
@@ -26,6 +28,7 @@ namespace baponkar.npc.zombie
         {
             attackTime = agent.config.attackTime;
             agent.isAttacking = true;
+            agent.navMeshAgent.isStopped = true;
             offset = new Vector3(Random.Range(-1f,1f),0f,Random.Range(-1f,1f));
             playerHealth = agent.playerTransform.GetComponent<PlayerHealth>();
         }
@@ -36,7 +39,7 @@ namespace baponkar.npc.zombie
            
             FacePlayer(agent, Vector3.zero);
             agent.animator.SetBool("isAttacking", agent.isAttacking);
-            float distance = Vector3.Distance(agent.playerTransform.position, agent.transform.position);
+            float distance = Vector3.Distance(agent.targetingSystem.TargetPosition, agent.transform.position);
             if(!agent.aiHealth.isDead && distance > agent.config.attackRadius)
             {
                 agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
@@ -64,18 +67,24 @@ namespace baponkar.npc.zombie
                 agent.playerSeen = false;
                 agent.stateMachine.ChangeState(NPCStateId.Patrol);
             }
+
+            if(!agent.targetingSystem.HasTarget)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Patrol);
+            }
             
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
             agent.isAttacking = false;
+            agent.navMeshAgent.isStopped = false;
             agent.animator.SetBool("isAttacking", agent.isAttacking);
         }
 
         private void FacePlayer(NPCAgent agent,Vector3 offset)
         {  
-            Vector3 direction = (agent.playerTransform.position - agent.navMeshAgent.transform.position + offset).normalized;
+            Vector3 direction = (agent.targetingSystem.TargetPosition - agent.navMeshAgent.transform.position + offset).normalized;
         
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
             agent.navMeshAgent.transform.rotation = Quaternion.Lerp(agent.navMeshAgent.transform.rotation, lookRotation,Time.time* agent.config.patrolTurnSpeed);
