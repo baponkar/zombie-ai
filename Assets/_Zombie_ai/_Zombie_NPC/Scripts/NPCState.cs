@@ -9,7 +9,8 @@ namespace baponkar.npc.zombie
         Patrol,
         ChasePlayer,
         Attack,
-        Death
+        Death,
+        Flee
 
     }
     public interface NPCState 
