@@ -8,7 +8,6 @@ namespace baponkar.npc.zombie
     public class NPCFleeState : NPCState
     {
         int multiplier = 1; // or more
-        float range = 30;
 
         public NPCStateId GetId()
         {
@@ -30,15 +29,10 @@ namespace baponkar.npc.zombie
         {
             Vector3 runTo = agent.transform.position + (agent.transform.position - agent.playerTransform.position) * multiplier;
             float distance = Vector3.Distance(agent.transform.position, agent.playerTransform.position);
-            if (distance < range)
+            if (distance < agent.config.fleeRange)
             {
                 agent.navMeshAgent.SetDestination(runTo);
-            }
-            // else
-            // {
-            //     agent.stateMachine.ChangeState(NPCStateId.Patrol);
-            // }
-                
+            }    
         }
     }
 }

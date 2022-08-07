@@ -42,6 +42,10 @@ namespace baponkar.npc.zombie
         [Range(0.0f, 2.0f)]
         public float offsetChaseSpeed = 1.0f;
         public float chaseWalkingSpeed = 2f;
+
+        [Header("Flee")]
+        [Range(0.0f, 30.0f)]
+        public float fleeRange = 30f;
     }
 }
 

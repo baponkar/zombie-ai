@@ -50,20 +50,15 @@ namespace baponkar.npc.zombie
                 {
                     if(timer <= 0.0f)
                     {
-                        //ChasePlayer(agent);
                         if(agent.targetingSystem.HasTarget)
                         {
                             agent.navMeshAgent.SetDestination(agent.targetingSystem.TargetPosition);
-                        }
-                        else
-                        {
-                            agent.stateMachine.ChangeState(NPCStateId.Patrol);
                         }
                         timer = agent.config.waitTime;
                     }
                 }
 
-                if(agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
+                if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
                 {
                     agent.stateMachine.ChangeState(NPCStateId.Attack);
                 }

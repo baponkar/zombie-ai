@@ -38,35 +38,7 @@ namespace baponkar.npc.zombie
         {
             
             timer -= Time.deltaTime;
-            if(!agent.aiHealth.isDead){
-                if(agent.targetingSystem.HasTarget){
-                    agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
-                }
-                else
-                {
-                    if(!walkPointSet)
-                    {
-                        SearchingPoint(agent);
-                    }
-                    if(walkPointSet && timer < 0f)
-                    {
-                        FacePatrol(agent);
-                        agent.navMeshAgent.SetDestination(tempTarget);
-                        lastTempTarget = tempTarget;
-                        timer = maxTime;
-                    }
-                
-                    if(agent.navMeshAgent.remainingDistance <= 0.1f)
-                    {
-                        walkPointSet = false;
-                    }
-                
-                }
-            }
-            else
-            {
-                agent.stateMachine.ChangeState(NPCStateId.Death);
-            }
+            Patrol(agent);
         }
 
         void SearchingPoint(NPCAgent agent)
@@ -127,6 +99,27 @@ namespace baponkar.npc.zombie
                 }
             }
             return false;
+        }
+
+        void Patrol(NPCAgent agent)
+        {
+            if(!walkPointSet)
+            {
+                SearchingPoint(agent);
+            }
+
+            if(walkPointSet && timer < 0f)
+            {
+                FacePatrol(agent);
+                agent.navMeshAgent.SetDestination(tempTarget);
+                lastTempTarget = tempTarget;
+                timer = maxTime;
+            }
+        
+            if(agent.navMeshAgent.remainingDistance <= 0.1f)
+            {
+                walkPointSet = false;
+            }
         }
     }
 }
