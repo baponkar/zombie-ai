@@ -18,8 +18,10 @@ It has roughly following Characteristics:
 - [x] Zombie - Chase Player
 - [x] Zombie - Patrolling
 - [x] Zombie - Attack
+- [x] Zombie - Flee
 - [x] Zombie - Dead
 - [x] Zombie - Call Near NPC to attack Player
+- [x] State Control by Behavior Tree
 - [x] Zombie - Sound Sensor
 - [x] Zombie - Vison Sensor
 - [x] Sensor Memory for Target
@@ -56,9 +58,10 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
    [2](https://www.youtube.com/watch?v=1H9jrKyWKs0)
 
 3. I have get ideas from  Youtuber ['Dev/GameDevelopment'](https://www.youtube.com/watch?v=UjkSFoLxesw&t=7s)s  tutorials
+
+4. [Unity Learn - BehaviorTree](https://learn.unity.com/tutorial/introducing-behaviour-trees?uv=2020.2&projectId=60645258edbc2a001f5585aa)   
    
-   
-4. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
+5. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
 
 ## Dependency
 1. This Assets depend on ['Zombie assets by Pxltiger']((https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)).
