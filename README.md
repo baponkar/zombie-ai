@@ -50,6 +50,7 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
 6. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
 7. Now put zombie prefab and player prefab in your scene.Player has attached a Health script which is damageable by Zombie.
 8. Zombie also has attached a Health Script which can be damagable by external player which has a weapon which can be used to damage zombies health.
+9. Change or tweak zombie behavior by setting up zombie config scriptable object.
 
 * This Project has a Demo Scene with necessary setup.
 ## License:
