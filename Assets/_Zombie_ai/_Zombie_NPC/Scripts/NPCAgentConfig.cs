@@ -22,6 +22,17 @@ namespace baponkar.npc.zombie
         [Range(0.0f, 1.0f)]
         public float patrolWaitTime = 0.5f;
 
+        [Header("Alert")]
+        [Range(0.0f, 5.0f)]
+        public float offsetAlertRadius = 2.5f;
+        public float alertRadius = 10f;
+        public float alertTurnSpeed = 5f;
+        [Range(0.0f, 1.0f)]
+        public float offsetalertSpeed = 0.5f;
+        public float alertWalkingSpeed = 2f;
+        [Range(0.0f, 1.0f)]
+        public float alertWaitTime = 0.5f;
+
 
         [Header("Attack")]
         [Range(0.0f, 2.5f)]

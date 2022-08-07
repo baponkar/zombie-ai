@@ -9,12 +9,14 @@ namespace baponkar.npc.zombie
     {
         SphereCollider sphereCollider;
         public Color color;
-        NPCAgent agent;
-        
         public float radius = 5f;
+        public float memoryTime = 2f;
+        bool forgetMemory = false;
+        float timer;
+        public bool canHear = false;
+
         void Start()
         {
-            agent = GetComponent<NPCAgent>();
             sphereCollider = GetComponent<SphereCollider>();
             if(sphereCollider == null)
             {
@@ -22,21 +24,37 @@ namespace baponkar.npc.zombie
             }
             sphereCollider.radius = radius;
             sphereCollider.isTrigger = true;
+            timer = memoryTime;
         }
 
         
         void Update()
         {
-            
+            if(forgetMemory)
+            {
+                timer -= Time.deltaTime;
+                if(timer <= 0)
+                {
+                    canHear = false;
+                    forgetMemory = false;
+                    timer = memoryTime;
+                }
+            }
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if(other.gameObject.tag == "Player")
             {
-                agent.isChaseing = true;
-                agent.playerSeen = true;
-                agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);     
+                canHear = true;    
+            }   
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                forgetMemory = true;   
             }   
         }
 

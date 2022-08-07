@@ -48,6 +48,7 @@ using baponkar.npc.zombie;
         public bool isDead;
         public bool isFleeing;
         public bool playerSeen = false;
+        public bool isAlert = false;
 
         [HideInInspector]
         public Vector3 initialPosition;
@@ -75,6 +76,7 @@ using baponkar.npc.zombie;
             stateMachine.RegisterState(new NPCPatrolState());
             stateMachine.RegisterState(new NPCAttackState());
             stateMachine.RegisterState(new NPCFleeState());
+            stateMachine.RegisterState(new NPCAlertState());
         
 
             stateMachine.ChangeState(initialState);
