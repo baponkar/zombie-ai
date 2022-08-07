@@ -67,7 +67,7 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
 5. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
 
 ## Dependency
-1. This Assets depend on ['Zombie assets by Pxltiger']((https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)).
+1. This Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232).
 So You need to download this package from Unity assets store along with this Zombie_Enemy_AI assets.
 2. [Standard-Assets-Characters](https://github.com/Unity-Technologies/Standard-Assets-Characters)
 I am using Audio files for footstep sound.
