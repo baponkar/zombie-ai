@@ -652,7 +652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 627421298}
   text: {fileID: 2140946805}
-  health: {fileID: 8415056579854092276}
+  health: {fileID: 1717828484}
 --- !u!1 &1858480986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,11 +1107,10 @@ GameObject:
   - component: {fileID: 9085547358668908740}
   - component: {fileID: 9085547358668908742}
   - component: {fileID: 783081461398560729}
-  - component: {fileID: 8415056579854092276}
   - component: {fileID: 1237750924}
   - component: {fileID: 1237750923}
   - component: {fileID: 1717828484}
-  m_Layer: 3
+  m_Layer: 13
   m_Name: FPS_Player
   m_TagString: Player
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -1179,21 +1178,6 @@ MonoBehaviour:
   movement: {x: 0, y: 0, z: 0}
   isGrounded: 0
   isJumping: 0
---- !u!114 &8415056579854092276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9085547358668908795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6e7829542714d42ad9bb3d402680d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  isDead: 0
 --- !u!82 &1237750924
 AudioSource:
   m_ObjectHideFlags: 0

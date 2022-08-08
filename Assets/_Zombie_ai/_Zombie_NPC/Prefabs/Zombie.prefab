@@ -763,6 +763,7 @@ GameObject:
   - component: {fileID: 2026438454}
   - component: {fileID: 1965058947}
   - component: {fileID: 1391920423}
+  - component: {fileID: 483990385}
   m_Layer: 6
   m_Name: Zombie
   m_TagString: NPC
@@ -1037,6 +1038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.26984876, g: 0.8113208, b: 0.1734899, a: 0.7137255}
   radius: 5
+  memoryTime: 2
+  canHear: 0
 --- !u!114 &1373999114323958387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1083,7 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  initialState: 1
+  initialState: 7
   navMeshAgent: {fileID: 0}
   config: {fileID: 11400000, guid: 8f650e088a78f0e43b2845a265180f19, type: 2}
   visonSensor: {fileID: 0}
@@ -1097,7 +1100,9 @@ MonoBehaviour:
   isChaseing: 0
   isAttacking: 0
   isDead: 0
+  isFleeing: 0
   playerSeen: 0
+  isAlert: 0
   initialPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1373999114323958380
 MonoBehaviour:
@@ -1160,6 +1165,20 @@ MonoBehaviour:
   distanceWeight: 2
   angleWeight: 1
   ageWeight: 1
+--- !u!114 &483990385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373999114323958383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f20c327b53b0480408284db18ef05a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionState: 1
+  patrolType: 0
 --- !u!1 &1451290863973145677
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using baponkar.npc.zombie;
 
 namespace Baponkar.FPS.Simple
 {
@@ -10,7 +10,7 @@ namespace Baponkar.FPS.Simple
     {
         public Slider slider;
         public Text text;
-        public PlayerHealth health;
+        public Health health;
         
         void Start()
         {

@@ -77,7 +77,7 @@ using baponkar.npc.zombie;
             stateMachine.RegisterState(new NPCAttackState());
             stateMachine.RegisterState(new NPCFleeState());
             stateMachine.RegisterState(new NPCAlertState());
-        
+            stateMachine.RegisterState(new NPCWaypointBasedPatrolState());
 
             stateMachine.ChangeState(initialState);
         }
@@ -86,7 +86,13 @@ using baponkar.npc.zombie;
         void Update()
         {
             stateMachine.Update();
+        }
 
+        public void FacePlayer()
+        {  
+            Vector3 direction = (targetingSystem.TargetPosition - navMeshAgent.transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation,Time.time* 720f);
         }
     }
 

@@ -21,6 +21,14 @@ MonoBehaviour:
   offsetPatrolSpeed: 0
   patrolWalkingSpeed: 3
   patrolWaitTime: 0.091
+  waypoints: {fileID: 8995942413041342849, guid: 218b6943addde914480e690a08891835,
+    type: 3}
+  offsetAlertRadius: 2.5
+  alertRadius: 10
+  alertTurnSpeed: 5
+  offsetalertSpeed: 0.5
+  alertWalkingSpeed: 2
+  alertWaitTime: 0.5
   offsetAttackRadius: 0
   attackRadius: 2
   attackTurnSpeed: 5
@@ -33,3 +41,4 @@ MonoBehaviour:
   chaseTurnSpeed: 5
   offsetChaseSpeed: 0
   chaseWalkingSpeed: 2
+  fleeRange: 30

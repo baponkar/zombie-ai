@@ -42,7 +42,7 @@ namespace baponkar.npc.zombie
                             NPCCall nearCalling = agents[i].transform.GetComponent<NPCCall>();
                             nearAgent.playerSeen = true;
                             nearCalling.getCall = true;
-                            if(!getCall) nearAgent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+                            if(!getCall) nearAgent.stateMachine.ChangeState(NPCStateId.Alert);
                         }
                     }
 

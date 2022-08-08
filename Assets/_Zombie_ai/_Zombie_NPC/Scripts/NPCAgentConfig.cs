@@ -1,5 +1,5 @@
-
 using UnityEngine;
+
 namespace baponkar.npc.zombie
 {
     [CreateAssetMenu()]
@@ -21,6 +21,9 @@ namespace baponkar.npc.zombie
         public float patrolWalkingSpeed = 2f;
         [Range(0.0f, 1.0f)]
         public float patrolWaitTime = 0.5f;
+
+        [Header("Waypoints Based Patrol")]
+        public GameObject waypoints;
 
         [Header("Alert")]
         [Range(0.0f, 5.0f)]

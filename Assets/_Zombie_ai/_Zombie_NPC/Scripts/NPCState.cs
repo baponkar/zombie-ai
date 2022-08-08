@@ -11,7 +11,8 @@ namespace baponkar.npc.zombie
         Attack,
         Death,
         Flee,
-        Alert
+        Alert,
+        WaypointPatrol
 
     }
     public interface NPCState 

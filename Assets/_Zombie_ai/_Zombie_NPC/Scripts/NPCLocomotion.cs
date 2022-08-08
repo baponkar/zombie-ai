@@ -7,20 +7,22 @@ namespace baponkar.npc.zombie
 {
    public class NPCLocomotion : MonoBehaviour
     {
-        NPCAgent agent;
+        NavMeshAgent agent;
+        Animator animator;
         float speed;
 
         
         void Start()
         {
-            agent = GetComponent<NPCAgent>();
+            agent = GetComponent<NavMeshAgent>();
+            animator = GetComponent<Animator>();
             speed = 0;
         }
 
         void Update()
         {
-            speed = Mathf.Clamp(agent.navMeshAgent.velocity.magnitude,0,1);
-            agent.animator.SetFloat("Speed", speed);
+            speed = Mathf.Clamp(agent.velocity.magnitude,0,1);
+            animator.SetFloat("Speed", speed);
         }
     }
 }
