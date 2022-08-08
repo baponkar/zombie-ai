@@ -24,7 +24,7 @@ MonoBehaviour:
   waypoints: {fileID: 8995942413041342849, guid: 218b6943addde914480e690a08891835,
     type: 3}
   offsetAlertRadius: 2.5
-  alertRadius: 10
+  alertRadius: 20
   alertTurnSpeed: 5
   offsetalertSpeed: 0.5
   alertWalkingSpeed: 2

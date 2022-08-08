@@ -1178,7 +1178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionState: 1
-  patrolType: 0
 --- !u!1 &1451290863973145677
 GameObject:
   m_ObjectHideFlags: 0
