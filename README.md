@@ -32,6 +32,7 @@ It has roughly following Characteristics:
 
 
 ## ![ScreenShots1](ScreenShots/Screenshot1.png)
+## ![ScreenShots1](ScreenShots/screenshot_with_multiple_zombie.png)
 
 ## Behavior Tree
 ## ![ScreenShots of behavior tree](ScreenShots/Zombie_behavior_tree.png)
