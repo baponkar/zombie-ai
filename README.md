@@ -5,8 +5,7 @@
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
 ![star](https://img.shields.io/github/stars/baponkar/zombie-ai)
 ![License](https://img.shields.io/github/license/baponkar/zombie-ai)
-
-[Twett](https://twitter.com/kar_bapon/status/1559204144837079040?s=20&t=oTI6AEi1JCPfsV_07RovSw)
+![Twett]([https://twitter.com/kar_bapon/status/1559204144837079040?s=20&t=oTI6AEi1JCPfsV_07RovSw](https://img.shields.io/twitter/url?style=social))
 
 
 # <span style="color:blue">Zombie AI for Unity Engine </span>.
