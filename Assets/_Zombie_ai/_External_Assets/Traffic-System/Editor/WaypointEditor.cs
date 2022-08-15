@@ -21,7 +21,7 @@ namespace baponkar
             }
             
 
-            Gizmos.DrawSphere(waypoint.transform.position, 0.1f);
+            Gizmos.DrawSphere(waypoint.transform.position, 0.5f);
             Gizmos.DrawLine(waypoint.transform.position + (waypoint.transform.right*waypoint.width/2f),waypoint.transform.position - (waypoint.transform.right*waypoint.width/2f));
             
             if(waypoint.prevWaypoint != null)

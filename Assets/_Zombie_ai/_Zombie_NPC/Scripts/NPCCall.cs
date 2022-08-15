@@ -34,7 +34,7 @@ namespace baponkar.npc.zombie
                 for(int i = 0; i < agents.Length; i++)
                 {
                     float distance = Vector3.Distance(agents[i].transform.position, transform.position);
-                    if(distance < callingDistance && !agents[i].isDead )
+                    if(distance < callingDistance && !agents[i].aiHealth.isDead )
                     {
                         if(agents[i].transform != agent.transform)
                     {

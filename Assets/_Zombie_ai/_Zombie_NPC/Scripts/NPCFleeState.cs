@@ -13,15 +13,14 @@ namespace baponkar.npc.zombie
         {
             return NPCStateId.Flee;
         }
+
         void NPCState.Enter(NPCAgent agent)
         {
-            agent.isFleeing = true;
             agent.navMeshAgent.isStopped = false;
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
-            agent.isFleeing = false;
             agent.navMeshAgent.isStopped = false;
         }
 

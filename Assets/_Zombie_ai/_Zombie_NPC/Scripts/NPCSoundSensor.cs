@@ -15,9 +15,12 @@ namespace baponkar.npc.zombie
         float timer;
         public bool canHear = false;
 
+        NPCAgent agent;
+
         void Start()
         {
             sphereCollider = GetComponent<SphereCollider>();
+            agent = GetComponent<NPCAgent>();
             if(sphereCollider == null)
             {
                 sphereCollider = gameObject.AddComponent<SphereCollider>();
@@ -46,7 +49,7 @@ namespace baponkar.npc.zombie
         {
             if(other.gameObject.tag == "Player")
             {
-                canHear = true;    
+                canHear = true;
             }   
         }
 

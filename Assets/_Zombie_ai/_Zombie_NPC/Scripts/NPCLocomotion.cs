@@ -21,7 +21,7 @@ namespace baponkar.npc.zombie
 
         void Update()
         {
-            speed = Mathf.Clamp(agent.velocity.magnitude,0,1);
+            speed = Mathf.Clamp(agent.velocity.magnitude , 0.0f ,5.0f);
             animator.SetFloat("Speed", speed);
         }
     }

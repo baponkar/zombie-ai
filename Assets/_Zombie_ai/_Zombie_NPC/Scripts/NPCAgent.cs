@@ -18,10 +18,13 @@ using baponkar.npc.zombie;
 
     public class NPCAgent : MonoBehaviour
     {
+        #region Variables
+
         [HideInInspector]
         public Transform playerTransform;
         public NPCStateMachine stateMachine;
         public NPCStateId initialState;
+        [SerializeField] NPCStateId currentState;
        
         [HideInInspector]
         public NavMeshAgent navMeshAgent;
@@ -30,8 +33,12 @@ using baponkar.npc.zombie;
         public NPCVisonSensor visonSensor;
         [HideInInspector]
         public NPCSoundSensor soundSensor;
+         [HideInInspector]
+        public NPCCall call;
         [HideInInspector]
         public Health aiHealth;
+        [HideInInspector]
+        public Health playerHealth;
 
         [HideInInspector]
         public Animator animator;
@@ -39,31 +46,42 @@ using baponkar.npc.zombie;
         public CapsuleCollider capsuleCollider;
         [HideInInspector]
         public NPCTargetingSystem targetingSystem;
+
+        public GameObject waypoints;
+        public Transform attackOrigin;//This point to determine attack
         
-        [Header("NPC Zombie Agent.")]
-        public bool isIdleing;
-        public bool isPatrolling;
-        public bool isChaseing;
-        public bool isAttacking;
-        public bool isDead;
-        public bool isFleeing;
+        
         public bool playerSeen = false;
-        public bool isAlert = false;
 
         [HideInInspector]
-        public Vector3 initialPosition;
+        public Vector3 initialPosition; //storeing the initial position of the zombie.
 
-    
+        #endregion
+
         void Start()
         {
             if(playerTransform == null){
                 playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+            }
+            else
+            {
+                Debug.Log("No player object with Player tag found!");
+            }
+
+            if(playerTransform != null)
+            {
+                playerHealth = playerTransform.GetComponent<Health>();
+            }
+            else
+            {
+                Debug.LogError("Player Health is not assigned!");
             }
 
             initialPosition = this.transform.position;
             navMeshAgent = GetComponent<NavMeshAgent>();
             visonSensor = GetComponentInChildren<NPCVisonSensor>();
             soundSensor = GetComponentInChildren<NPCSoundSensor>();
+            call = GetComponentInChildren<NPCCall>();
             aiHealth = GetComponent<Health>();
             animator = GetComponentInChildren<Animator>();
             capsuleCollider = GetComponent<CapsuleCollider>();
@@ -86,13 +104,67 @@ using baponkar.npc.zombie;
         void Update()
         {
             stateMachine.Update();
+            currentState = stateMachine.currentState;
         }
 
-        public void FacePlayer()
+        public void FaceTarget()
         {  
             Vector3 direction = (targetingSystem.TargetPosition - navMeshAgent.transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
             transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation,Time.time* 720f);
+        }
+
+        public void FacePlayer()
+        {  
+            Vector3 direction = (playerTransform.position - navMeshAgent.transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation,Time.time* 720f);
+        }
+
+        
+
+        public bool findThePlayer()
+        {
+            //finding Player by using only Vison Sensor
+            for (int i=0; i < visonSensor.Objects.Count;i++)
+            {
+                if(visonSensor.Objects[i].tag == "Player")
+                {
+                    playerSeen = true;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool FindThePlayerWithTargetingSystem()
+        {
+            //finding Player by using Targeting System
+            if(targetingSystem.HasTarget)
+            {
+                if(targetingSystem.Target.tag == "Player")
+                {
+                    playerSeen = true;
+                    return true;
+                }
+            }
+            playerSeen = false;
+            return false;
+        }
+
+        void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            if(targetingSystem.HasTarget)
+            {
+                Gizmos.DrawLine(attackOrigin.position, targetingSystem.TargetPosition);
+                Vector3 left = targetingSystem.TargetPosition;
+                left.x -= 1f;
+                Gizmos.DrawLine(attackOrigin.position, left);
+                Vector3 right = targetingSystem.TargetPosition;
+                right.x += 1f;
+                Gizmos.DrawLine(attackOrigin.position, right);
+            }
         }
     }
 

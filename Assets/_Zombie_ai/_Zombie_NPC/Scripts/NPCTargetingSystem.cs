@@ -21,10 +21,65 @@ namespace baponkar.npc.zombie
         }
 
         NPCMemory bestMemory = null;
-        public GameObject Target { get { return bestMemory.gameObject; } }
-        public Vector3 TargetPosition { get { return bestMemory.gameObject.transform.position; } }
-        public bool TargetInSight { get { return bestMemory.age < 0.5f; } }
-        public float TargetDistance { get { return bestMemory.distance; } }
+        public GameObject Target 
+        { 
+            get 
+            {
+                if(HasTarget)
+                {
+                    return bestMemory.gameObject; 
+                }
+                else
+                {
+                    return null;
+                }
+             } 
+        }
+
+        public Vector3 TargetPosition 
+        { 
+            get 
+            { 
+                if(HasTarget)
+                {
+                    return bestMemory.gameObject.transform.position;
+                } 
+                else 
+                {
+                    return Vector3.zero;
+                } 
+            } 
+        }
+
+        public bool TargetInSight 
+        { 
+            get 
+            {
+                if(HasTarget) 
+                {
+                    return bestMemory.age < 0.5f;
+                } 
+                else
+                {
+                    return false;
+                }
+            } 
+        }
+
+        public float TargetDistance 
+        { 
+            get 
+            { 
+                if(HasTarget)
+                {
+                    return bestMemory.distance; 
+                }
+                else
+                {
+                    return Mathf.Infinity;
+                }
+            } 
+        }
         NPCSensoryMemory memory = new NPCSensoryMemory(10);
         NPCVisonSensor sensor;
         

@@ -13,18 +13,43 @@ namespace baponkar.npc.zombie
 
         void NPCState.Enter(NPCAgent agent)
         {
-            agent.isIdleing = true;
             agent.navMeshAgent.isStopped = true;
         }
 
         void NPCState.Update(NPCAgent agent)
         {
+            if(agent.aiHealth.isDead)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Death);
+            }
+
+            if(agent.playerHealth.isDead)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Patrol);
+            }
+
+            if(agent.targetingSystem.HasTarget)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+            }
+
+            if(agent.soundSensor.canHear || agent.call.getCall)
+            {
+                agent.FacePlayer();
+                if(agent.targetingSystem.HasTarget)
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+                }
+                else
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.Alert);
+                }
+            }
 
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
-            agent.isIdleing = false;
             agent.navMeshAgent.isStopped = false;
         }
     }

@@ -12,23 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bdedcc21c6f124bb930ed641537f34, type: 3}
   m_Name: NPC_Agent_Configaration
   m_EditorClassIdentifier: 
-  waitTime: 0.5
-  maxDistance: 1
-  maxSightDistance: 30
-  offsetPatrolRadius: 0
   patrolRadius: 15
-  patrolTurnSpeed: 5
-  offsetPatrolSpeed: 0
-  patrolWalkingSpeed: 3
-  patrolWaitTime: 0.091
-  waypoints: {fileID: 8995942413041342849, guid: 218b6943addde914480e690a08891835,
+  patrolSpeed: 3
+  patrolAcceleration: 8
+  patrolTurnSpeed: 320
+  patrolWaitTime: 1
+  waypoints: {fileID: 7244450529012751680, guid: b4aec6c486e996e4883e615a010d6217,
     type: 3}
-  offsetAlertRadius: 2.5
   alertRadius: 20
-  alertTurnSpeed: 5
-  offsetalertSpeed: 0.5
-  alertWalkingSpeed: 2
-  alertWaitTime: 0.5
+  alertSpeed: 5
+  alertAcceleration: 20
+  alertTurnSpeed: 720
+  alertWaitTime: 1
   offsetAttackRadius: 0
   attackRadius: 2
   attackTurnSpeed: 5
@@ -36,9 +31,9 @@ MonoBehaviour:
   attackWalkingSpeed: 2
   attackDamage: 10
   attackTime: 1
+  chaseWaitTime: 1
   offsetChaseRadius: 0
   chaseRadius: 20
   chaseTurnSpeed: 5
-  offsetChaseSpeed: 0
   chaseWalkingSpeed: 2
   fleeRange: 30

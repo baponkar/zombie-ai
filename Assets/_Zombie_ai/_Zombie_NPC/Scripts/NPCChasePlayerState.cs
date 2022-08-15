@@ -16,58 +16,23 @@ namespace baponkar.npc.zombie
         void NPCState.Enter(NPCAgent agent)
         {
             agent.playerSeen = true;
-            agent.isChaseing = true;
             agent.navMeshAgent.isStopped = false;
             agent.navMeshAgent.stoppingDistance = agent.config.attackRadius;
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
-            agent.isChaseing = false;
             agent.navMeshAgent.stoppingDistance = 0.0f;
             agent.navMeshAgent.isStopped = false;
         }
 
         void NPCState.Update(NPCAgent agent)
         {
-            timer -= Time.deltaTime;
-            if(agent.aiHealth.isDead)
-            {
-                agent.stateMachine.ChangeState(NPCStateId.Death);
-            }
-            else
-            {
-                if(!agent.navMeshAgent.hasPath){
-                    if(timer <= 0.0f){
-                        if(agent.targetingSystem.TargetPosition != null)
-                        {
-                            agent.navMeshAgent.SetDestination(agent.targetingSystem.TargetPosition);
-                            timer = agent.config.waitTime;
-                        }
-                    }
-                }
-                else
-                {
-                    if(timer <= 0.0f)
-                    {
-                        if(agent.targetingSystem.HasTarget)
-                        {
-                            agent.navMeshAgent.SetDestination(agent.targetingSystem.TargetPosition);
-                        }
-                        timer = agent.config.waitTime;
-                    }
-                }
-
-                if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
-                {
-                    agent.stateMachine.ChangeState(NPCStateId.Attack);
-                }
-            }
+           ChasePlayer(agent);
         }
 
         private static void ChasePlayer(NPCAgent agent)
         {
-            PlayerHealth playerHealth = GameObject.FindObjectOfType<PlayerHealth>();
             if(agent.targetingSystem.HasTarget)
             {
                 float distance = Vector3.Distance(agent.targetingSystem.TargetPosition, agent.transform.position);
@@ -85,12 +50,11 @@ namespace baponkar.npc.zombie
             else
             {
                 agent.stateMachine.ChangeState(NPCStateId.Patrol);
+                agent.playerSeen = false;
             }
             
-
             
-            
-            if(playerHealth.isDead)
+            if(agent.playerHealth.isDead)
             {
                 agent.stateMachine.ChangeState(NPCStateId.Patrol);
             }

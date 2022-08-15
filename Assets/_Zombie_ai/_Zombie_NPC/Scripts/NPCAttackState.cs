@@ -16,8 +16,12 @@ namespace baponkar.npc.zombie
         Health playerHealth;
 
         RaycastHit hit;
+        RaycastHit hitL;
+        RaycastHit hitR;
 
-        
+        private Vector3 direction;
+        private Vector3 directionL;
+        private Vector3 directionR;
 
         public NPCStateId GetId()
         {
@@ -27,38 +31,69 @@ namespace baponkar.npc.zombie
         void NPCState.Enter(NPCAgent agent)
         {
             attackTime = agent.config.attackTime;
-            agent.isAttacking = true;
             agent.navMeshAgent.isStopped = true;
             offset = new Vector3(Random.Range(-1f,1f),0f,Random.Range(-1f,1f));
             playerHealth = agent.playerTransform.GetComponent<Health>();
+            agent.animator.SetBool("isAttacking", true);
+            agent.FacePlayer();
         }
+
         void NPCState.Update(NPCAgent agent)
         {
             timer -= Time.deltaTime;
-            FacePlayer(agent, Vector3.zero);
-            agent.animator.SetBool("isAttacking", agent.isAttacking);
-                
-            timer -= Time.deltaTime;
 
-            if(timer <= 0)
+            if(agent.aiHealth.isDead)
             {
-                playerHealth.TakeDamage(agent.config.attackDamage, agent.transform.position);
-                timer = attackTime;
+                agent.stateMachine.ChangeState(NPCStateId.Death);
+            }
+            else
+            {
+                if(agent.playerHealth.isDead)
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.Patrol);
+                }
+                else
+                {
+                    if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
+                    {
+                        Debug.Log(agent.targetingSystem.TargetDistance);
+                        if(timer <= 0f )
+                        {
+                            Attack(agent);
+                            timer = attackTime;
+                        }
+                    }
+                    else if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance > agent.config.attackRadius)
+                    {
+                        agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+                    }
+                    else
+                    {
+                        agent.stateMachine.ChangeState(NPCStateId.Alert);
+                    }
+                }
             }
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
-            agent.isAttacking = false;
             agent.navMeshAgent.isStopped = false;
-            agent.animator.SetBool("isAttacking", agent.isAttacking);
+            agent.animator.SetBool("isAttacking", false);
         }
 
-        private void FacePlayer(NPCAgent agent,Vector3 offset)
-        {  
-            Vector3 direction = (agent.targetingSystem.TargetPosition - agent.navMeshAgent.transform.position + offset).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
-            agent.navMeshAgent.transform.rotation = Quaternion.Lerp(agent.navMeshAgent.transform.rotation, lookRotation,Time.time* agent.config.patrolTurnSpeed);
+        private void Attack(NPCAgent agent)
+        {
+            direction = (agent.playerTransform.position - agent.transform.position).normalized;
+            var raycastMiddle = Physics.Raycast(agent.transform.position, direction, out hit, agent.config.attackRadius);
+
+            if(raycastMiddle)
+            {
+                if(hit.collider.gameObject.tag == "Player" )
+                {
+                    Debug.Log("Attacking");
+                    agent.playerHealth.TakeDamage(agent.config.attackDamage, direction);
+                }
+            }
         }
     }
 }

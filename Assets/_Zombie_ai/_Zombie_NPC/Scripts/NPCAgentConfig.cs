@@ -5,36 +5,25 @@ namespace baponkar.npc.zombie
     [CreateAssetMenu()]
     public class NPCAgentConfig : ScriptableObject
     {
-        [Header("NPC Zombie Agent")]
-        public float waitTime = 1.0f; //the wait time to ai re follow the player
-        public float maxDistance = 1.0f;
-        public float maxSightDistance = 30.0f;
-
-
-        [Header("Patrol")]
-        [Range(0.0f, 5.0f)]
-        public float offsetPatrolRadius = 2.5f;
+        
+        [Header("Patrol.")]
         public float patrolRadius = 10f;
-        public float patrolTurnSpeed = 5f;
-        [Range(0.0f, 1.0f)]
-        public float offsetPatrolSpeed = 0.5f;
-        public float patrolWalkingSpeed = 2f;
-        [Range(0.0f, 1.0f)]
-        public float patrolWaitTime = 0.5f;
+        public float patrolSpeed = 2f;
+        public float patrolAcceleration = 8f;
+        public float patrolTurnSpeed = 520f;
+        [Range(0.0f, 2.0f)]
+        public float patrolWaitTime = 1f;
 
         [Header("Waypoints Based Patrol")]
         public GameObject waypoints;
 
-        [Header("Alert")]
-        [Range(0.0f, 5.0f)]
-        public float offsetAlertRadius = 2.5f;
-        public float alertRadius = 10f;
-        public float alertTurnSpeed = 5f;
-        [Range(0.0f, 1.0f)]
-        public float offsetalertSpeed = 0.5f;
-        public float alertWalkingSpeed = 2f;
-        [Range(0.0f, 1.0f)]
-        public float alertWaitTime = 0.5f;
+        [Header("Alert!")]
+        public float alertRadius = 20f;
+        public float alertSpeed = 4f;
+        public float alertAcceleration = 20f;
+        public float alertTurnSpeed = 720f;
+        [Range(0.0f, 4.0f)]
+        public float alertWaitTime = 1f;
 
 
         [Header("Attack")]
@@ -49,12 +38,11 @@ namespace baponkar.npc.zombie
         public float attackTime = 1.0f;
 
         [Header("Chase")]
-        [Range(0.0f, 5.0f)]
+        [Range(0.0f, 2.0f)]
+        public float chaseWaitTime = 1.0f;
         public float offsetChaseRadius = 2.5f;
         public float chaseRadius = 20f;
         public float chaseTurnSpeed = 5f;
-        [Range(0.0f, 2.0f)]
-        public float offsetChaseSpeed = 1.0f;
         public float chaseWalkingSpeed = 2f;
 
         [Header("Flee")]

@@ -7,55 +7,78 @@ namespace baponkar.npc.zombie
 {
     public class NPCAlertState : NPCState
     {
+        #region Variables
+
         bool walkPointSet;
         Vector3 tempTarget;
         Vector3 lastTempTarget;
+
         float timer;
-        float maxTime = 1f;
+        float maxTime;
+
         NavMeshPath navMeshPath;
         Vector3 initialPosition;
+
+        #endregion
     
         public NPCStateId GetId()
         {
             return NPCStateId.Alert;
         }
+
         void NPCState.Enter(NPCAgent agent)
         {
-            agent.isAlert = true;
             navMeshPath = new NavMeshPath();
             agent.navMeshAgent.isStopped = false;
-            agent.navMeshAgent.speed = agent.config.alertTurnSpeed;
+
+            agent.navMeshAgent.speed = agent.config.alertSpeed;
+            agent.navMeshAgent.acceleration = agent.config.alertAcceleration;
+            agent.navMeshAgent.angularSpeed  = agent.config.alertTurnSpeed;
+            maxTime = agent.config.alertWaitTime;
             initialPosition = agent.transform.position;
         }
 
         void NPCState.Exit(NPCAgent agent)
         {
-            agent.isAlert = false;
             agent.navMeshAgent.isStopped = false;
         }
 
 
         void NPCState.Update(NPCAgent agent)
         {
-            
+            //agent.FacePlayer();
+
             timer -= Time.deltaTime;
-            Alert(agent);
+
+            if(!agent.aiHealth.isDead)
+            {
+                if(agent.targetingSystem.HasTarget)
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+                }
+                else
+                {
+                    Patrol(agent);
+                }
+            }
+            else
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Death);
+            }
         }
 
         void SearchingPoint(NPCAgent agent)
         {
             Vector3 tempPos = Vector3.zero;
             tempPos = RandomNavmeshLocation(agent);
-            //tempTarget = new Vector3(agent.navMeshAgent.transform.position.x + tempPos.x, agent.navMeshAgent.transform.position.y, agent.navMeshAgent.transform.position.z + tempPos.z);
+    
             NavMeshHit hit;
             if (NavMesh.SamplePosition(tempPos, out hit, agent.config.alertRadius, NavMesh.AllAreas) )
             {
                 if(agent.navMeshAgent.CalculatePath(hit.position, navMeshPath)) //check a path available or not
                 {
-                    
                     tempTarget = hit.position;
                     walkPointSet = true;
-                    
                 }
             }
             else
@@ -80,29 +103,14 @@ namespace baponkar.npc.zombie
             return finalPosition;
         }
 
-        void FaceAlert(NPCAgent agent)
+        void FacePatrol(NPCAgent agent)
         {   
             Vector3 direction = (tempTarget- agent.navMeshAgent.transform.position).normalized;
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
-            agent.navMeshAgent.transform.rotation = Quaternion.Lerp(agent.navMeshAgent.transform.rotation, lookRotation,Time.time*agent.config.alertTurnSpeed);
+            agent.navMeshAgent.transform.rotation = Quaternion.Lerp(agent.navMeshAgent.transform.rotation, lookRotation,Time.time * agent.config.alertTurnSpeed);
         }
         
-        
-        bool findThePlayer(NPCAgent agent)
-        {
-            //finding Player by using only Vison Sensor
-            for (int i=0; i < agent.visonSensor.Objects.Count;i++)
-            {
-                if(agent.visonSensor.Objects[i].tag == "Player")
-                {
-                    agent.playerSeen = true;
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        void Alert(NPCAgent agent)
+        void Patrol(NPCAgent agent)
         {
             if(!walkPointSet)
             {
@@ -111,7 +119,7 @@ namespace baponkar.npc.zombie
 
             if(walkPointSet && timer < 0f)
             {
-                FaceAlert(agent);
+                FacePatrol(agent);
                 agent.navMeshAgent.SetDestination(tempTarget);
                 lastTempTarget = tempTarget;
                 timer = maxTime;

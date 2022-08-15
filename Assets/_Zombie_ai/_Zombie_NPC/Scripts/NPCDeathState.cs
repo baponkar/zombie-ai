@@ -10,11 +10,11 @@ namespace baponkar.npc.zombie
         
         public NPCStateId GetId()
         {
-        return NPCStateId.Death; 
+            return NPCStateId.Death; 
         }
+
         void NPCState.Enter(NPCAgent agent)
         {
-            agent.isDead = true;
             if(agent.navMeshAgent != null)
             {
                 agent.navMeshAgent.isStopped = true;
@@ -25,7 +25,7 @@ namespace baponkar.npc.zombie
         
         void NPCState.Exit(NPCAgent agent)
         {
-            agent.isDead = false;
+        
         }
 
     

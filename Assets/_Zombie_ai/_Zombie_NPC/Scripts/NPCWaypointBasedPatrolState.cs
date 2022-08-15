@@ -16,7 +16,6 @@ namespace baponkar.npc.zombie
         }
         void NPCState.Enter(NPCAgent agent)
         {
-            agent.isPatrolling = true;
             currentWaypoint = agent.config.waypoints.GetComponentInChildren<Waypoint>();
             direction = Mathf.RoundToInt(Random.Range(0f,1f));
             agent.navMeshAgent.SetDestination(currentWaypoint.GetPosition());
@@ -24,11 +23,45 @@ namespace baponkar.npc.zombie
 
         void NPCState.Exit(NPCAgent agent)
         {
-           agent.isPatrolling = false;
+
         }
 
 
         void NPCState.Update(NPCAgent agent)
+        {
+            if(agent.aiHealth.isDead)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Death);
+            }
+
+            if(agent.playerHealth.isDead)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Patrol);
+            }
+
+            if(agent.targetingSystem.HasTarget)
+            {
+                agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+            }
+
+            if(agent.soundSensor.canHear || agent.call.getCall)
+            {
+                agent.FacePlayer();
+                if(agent.targetingSystem.HasTarget)
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+                }
+                else
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.Alert);
+                }
+            }
+
+            WaypointPatrol(agent);
+        }
+
+
+        void WaypointPatrol(NPCAgent agent)
         {
             if(agent.navMeshAgent.remainingDistance <= agent.navMeshAgent.stoppingDistance + 0.1f)
             {
