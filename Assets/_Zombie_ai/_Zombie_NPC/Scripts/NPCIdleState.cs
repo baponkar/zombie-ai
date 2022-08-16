@@ -46,6 +46,19 @@ namespace baponkar.npc.zombie
                 }
             }
 
+            if(agent.aiHealth.currentHealth < agent.aiHealth.maxHealth)
+            {
+               agent.FacePlayer();
+                if(agent.targetingSystem.HasTarget)
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.ChasePlayer);
+                }
+                else
+                {
+                    agent.stateMachine.ChangeState(NPCStateId.Alert);
+                } 
+            }
+
         }
 
         void NPCState.Exit(NPCAgent agent)

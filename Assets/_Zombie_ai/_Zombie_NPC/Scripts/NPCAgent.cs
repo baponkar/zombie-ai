@@ -152,19 +152,19 @@ using baponkar.npc.zombie;
             return false;
         }
 
-        void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            if(targetingSystem.HasTarget)
-            {
-                Gizmos.DrawLine(attackOrigin.position, targetingSystem.TargetPosition);
-                Vector3 left = targetingSystem.TargetPosition;
-                left.x -= 1f;
-                Gizmos.DrawLine(attackOrigin.position, left);
-                Vector3 right = targetingSystem.TargetPosition;
-                right.x += 1f;
-                Gizmos.DrawLine(attackOrigin.position, right);
-            }
-        }
+        // void OnDrawGizmos()
+        // {
+        //     Gizmos.color = Color.red;
+        //     if(targetingSystem.HasTarget)
+        //     {
+        //         Gizmos.DrawLine(attackOrigin.position, targetingSystem.TargetPosition);
+        //         Vector3 left = targetingSystem.TargetPosition;
+        //         left.x -= 1f;
+        //         Gizmos.DrawLine(attackOrigin.position, left);
+        //         Vector3 right = targetingSystem.TargetPosition;
+        //         right.x += 1f;
+        //         Gizmos.DrawLine(attackOrigin.position, right);
+        //     }
+        // }
     }
 

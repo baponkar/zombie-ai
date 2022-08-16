@@ -8,7 +8,7 @@ namespace baponkar.npc.zombie
         
         [Header("Patrol.")]
         public float patrolRadius = 10f;
-        public float patrolSpeed = 2f;
+        public float patrolSpeed = 3f;
         public float patrolAcceleration = 8f;
         public float patrolTurnSpeed = 520f;
         [Range(0.0f, 2.0f)]
