@@ -8,7 +8,6 @@
 
 
 
-
 # <span style="color:blue">Zombie AI for Unity Engine </span>.
 A FSM based Zombie NPC Unity Project with a Demo Scene.See [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
 
