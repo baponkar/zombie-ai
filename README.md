@@ -29,7 +29,7 @@ It has roughly following Characteristics:
 - [x] Walking Audio 
 - [x] Camera Shake
 
-
+## ![ScreenShots0](ScreenShots/screenshot_with_weapon.png)
 ## ![ScreenShots1](ScreenShots/Screenshot1.png)
 ## ![ScreenShots1](ScreenShots/screenshot_with_multiple_zombie.png)
 
