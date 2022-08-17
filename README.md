@@ -72,10 +72,12 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
 So You need to download this package from Unity assets store along with this Zombie_Enemy_AI assets.
 2. [Standard-Assets-Characters](https://github.com/Unity-Technologies/Standard-Assets-Characters)
 I am using Audio files for footstep sound.
-3. [Unity Simple FPS](https://github.com/baponkar/Unity-Simple-FPS) by me.
-4. [My Behavior Tree](https://github.com/baponkar/My-Behavior-Tree) by me.
-5. [Traffic-System](https://github.com/baponkar/Traffic-System-in-Unity) by me.
+3. [Rifle by Game-Ready Studios](https://assetstore.unity.com/packages/3d/props/guns/rifle-25668)
+4. [Unity Simple FPS](https://github.com/baponkar/Unity-Simple-FPS) by me.
+5. [My Behavior Tree](https://github.com/baponkar/My-Behavior-Tree) by me.
+6. [Traffic-System](https://github.com/baponkar/Traffic-System-in-Unity) by me.
 
+* I have put all the above packages file and folder inside of this project.
 ## Unity Version
 Unity 2020.3.15f2 or higher version.
 
