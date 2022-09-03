@@ -9,7 +9,7 @@
 
 
 # <span style="color:blue">Zombie AI for Unity Engine </span>.
-A FSM based Zombie NPC Unity Project with a Demo Scene.See [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
+A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
 
 It has roughly following Characteristics:
 
@@ -76,6 +76,7 @@ I am using Audio files for footstep sound.
 4. [Unity Simple FPS](https://github.com/baponkar/Unity-Simple-FPS) by me.
 5. [My Behavior Tree](https://github.com/baponkar/My-Behavior-Tree) by me.
 6. [Traffic-System](https://github.com/baponkar/Traffic-System-in-Unity) by me.
+7. [Kiwi coder Behavior Tree](https://thekiwicoder.com/behaviour-tree-editor/) by Kiwi Coder.
 
 * I have put all the above packages file and folder inside of this project.
 ## Unity Version

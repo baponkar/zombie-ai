@@ -84,9 +84,9 @@ namespace baponkar.npc.zombie
         private void Attack(NPCAgent agent)
         {
             direction = (agent.playerTransform.position - agent.transform.position).normalized;
-            var raycastMiddle = Physics.Raycast(agent.transform.position, direction, out hit, agent.config.attackRadius);
+            var raycast = Physics.Raycast(agent.transform.position, direction, out hit, agent.config.attackRadius);
 
-            if(raycastMiddle)
+            if(raycast)
             {
                 if(hit.collider.gameObject.tag == "Player" )
                 {
