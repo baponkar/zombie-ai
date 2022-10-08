@@ -293,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 9085547358668908740, guid: 7a17e775fac3cb34185350eb45f247ff,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6
+      value: 33.2
       objectReference: {fileID: 0}
     - target: {fileID: 9085547358668908740, guid: 7a17e775fac3cb34185350eb45f247ff,
         type: 3}
@@ -334,6 +334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FPS_Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085547358668908795, guid: 7a17e775fac3cb34185350eb45f247ff,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a17e775fac3cb34185350eb45f247ff, type: 3}
@@ -967,6 +972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Waypoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995942413041342849, guid: 218b6943addde914480e690a08891835,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 218b6943addde914480e690a08891835, type: 3}
@@ -1754,10 +1764,20 @@ PrefabInstance:
       propertyPath: waypoints
       value: 
       objectReference: {fileID: 772348888}
+    - target: {fileID: 1373999114323958381, guid: e7efd3135f6438845adbcc14555c3ca0,
+        type: 3}
+      propertyPath: initialState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1373999114323958383, guid: e7efd3135f6438845adbcc14555c3ca0,
         type: 3}
       propertyPath: m_Name
       value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373999114323958383, guid: e7efd3135f6438845adbcc14555c3ca0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1373999114323958394, guid: e7efd3135f6438845adbcc14555c3ca0,
         type: 3}
