@@ -43,7 +43,7 @@ public class Weapon : MonoBehaviour
         {
             hitEffect.transform.position = hit.point;
             hitEffect.Emit(1);
-            Debug.Log("We hit " + hit.transform.name);
+            
 
             Health health = hit.transform.GetComponent<Health>();
             if(health != null)

@@ -56,7 +56,6 @@ namespace baponkar.npc.zombie
                 {
                     if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
                     {
-                        Debug.Log(agent.targetingSystem.TargetDistance);
                         if(timer <= 0f )
                         {
                             Attack(agent);

@@ -4,18 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 using baponkar.npc.zombie;
-
-
-    // [RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
-    // [RequireComponent(typeof(NPCHealth))]
-    // [RequireComponent(typeof(Rigidbody))]
-    // [RequireComponent(typeof(DebugNavmeshAgent))]
-    // [RequireComponent(typeof(NPCVisonSensor))]
-    // [RequireComponent(typeof(NPCSoundSensor))]
-    // [RequireComponent(typeof(AudioSource))]
-    // [RequireComponent(typeof(CapsuleCollider))]
-    // [RequireComponent(typeof(NPCCall))]
-
     public class NPCAgent : MonoBehaviour
     {
         #region Variables
@@ -48,7 +36,7 @@ using baponkar.npc.zombie;
         public NPCTargetingSystem targetingSystem;
 
         public GameObject waypoints;
-        public Transform attackOrigin;//This point to determine attack
+        //public Transform attackOrigin;//This point to determine attack
         
         
         public bool playerSeen = false;

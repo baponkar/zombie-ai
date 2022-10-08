@@ -31,7 +31,6 @@ public class AttackNode : ActionNode
             Health targetHealth = targetingSystem.Target.GetComponent<Health>();
             if(targetingSystem.TargetDistance <= 2f)
             {
-                Debug.Log(targetingSystem.TargetDistance);
                 if(targetHealth.isDead)
                 {
                     return State.Success;
