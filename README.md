@@ -20,7 +20,7 @@ It has roughly following Characteristics:
 - [x] Zombie - Flee
 - [x] Zombie - Dead
 - [x] Zombie - Call Near NPC to attack Player
-- [x] State Control by Behavior Tree
+- [x] State Control by Behavior Tree and Statemachine[Both prefab have]
 - [x] Zombie - Sound Sensor
 - [x] Zombie - Vison Sensor
 - [x] Sensor Memory for Target
