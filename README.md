@@ -42,9 +42,12 @@ It has roughly following Characteristics:
 This is complete Unity Project if You download this project and open it then it will works perfectly.
 If you use this project with your old project then first put 'Asset' folder in your project.
 Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.
-
+0. Add following layers in the following orders 
+Layer 3 - Player,Layer 6-NPC,Layer 7-Sensor,Layer 8-Lighting,Layer 9-Ground,Layer 13-Character, Layer 14-Mini Map
 1. NPC  : Change Default layer to NPC layer on Zombie Prefab.
-2. Player : Change Default layer to Character layer on Player Prefab.
+ Change Tag NPC of Zombie Prefab.
+2. Player : Change "Default" layer to "Character" layer on Player Prefab.
+Change Tag of Player with "Player"
 3. Ground : Change Default layer to Ground layer on Ground Plain or Terrain or like that envirionment object.
 4. Change Vision Sensor(Which attached to the Zombie Prefab)'s target layer to 'Character'.
 5. Change All Occulation layer of Vision Sensor(Which attached to the Zombie Prefab) to Default,Ground etc all occulation layer have in your scene.
