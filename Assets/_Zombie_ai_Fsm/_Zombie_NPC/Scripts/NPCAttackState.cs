@@ -13,7 +13,7 @@ namespace baponkar.npc.zombie
         float attackTime;
 
         Vector3 offset;
-        Health playerHealth;
+        
 
         RaycastHit hit;
         RaycastHit hitL;
@@ -33,7 +33,7 @@ namespace baponkar.npc.zombie
             attackTime = agent.config.attackTime;
             agent.navMeshAgent.isStopped = true;
             offset = new Vector3(Random.Range(-1f,1f),0f,Random.Range(-1f,1f));
-            playerHealth = agent.playerTransform.GetComponent<Health>();
+            //playerHealth = agent.playerTransform.GetComponent<Health>();
             agent.animator.SetBool("isAttacking", true);
             agent.FacePlayer();
         }
@@ -48,12 +48,12 @@ namespace baponkar.npc.zombie
             }
             else
             {
-                if(agent.playerHealth.isDead)
+                /*if(agent.playerHealth.isDead)
                 {
                     agent.stateMachine.ChangeState(NPCStateId.Patrol);
                 }
                 else
-                {
+                {*/
                     if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
                     {
                         if(timer <= 0f )
@@ -70,7 +70,7 @@ namespace baponkar.npc.zombie
                     {
                         agent.stateMachine.ChangeState(NPCStateId.Alert);
                     }
-                }
+                //}
             }
         }
 
@@ -90,7 +90,7 @@ namespace baponkar.npc.zombie
                 if(hit.collider.gameObject.tag == "Player" )
                 {
                     Debug.Log("Attacking");
-                    agent.playerHealth.TakeDamage(agent.config.attackDamage, direction);
+                    
                 }
             }
         }

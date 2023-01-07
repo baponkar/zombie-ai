@@ -10,13 +10,13 @@ namespace baponkar.npc.zombie
         public Transform target;
         public Vector3 offset;
 
-        [HideInInspector] public Health health;
+        [HideInInspector] public ZombieHealth health;
 
         [HideInInspector] public Slider slider;
         
         void Start()
         {
-            health = GetComponentInParent<Health>();
+            health = GetComponentInParent<ZombieHealth>();
             slider = GetComponentInChildren<Slider>();
         }
     

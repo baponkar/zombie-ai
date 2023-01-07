@@ -6,7 +6,7 @@ namespace baponkar.npc.zombie
 {
     public class HitBox : MonoBehaviour
     {
-        public Health health;
+        public ZombieHealth health;
 
         // public void OnRaycastHit(RaycastWeapon weapon, Vector3 direction)
         // {

@@ -54,10 +54,7 @@ namespace baponkar.npc.zombie
             }
             
             
-            if(agent.playerHealth.isDead)
-            {
-                agent.stateMachine.ChangeState(NPCStateId.Patrol);
-            }
+            
         }
     }
 }

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 using baponkar.npc.zombie;
+
+
     public class NPCAgent : MonoBehaviour
     {
         #region Variables
@@ -24,9 +25,7 @@ using baponkar.npc.zombie;
          [HideInInspector]
         public NPCCall call;
         [HideInInspector]
-        public Health aiHealth;
-        [HideInInspector]
-        public Health playerHealth;
+        public ZombieHealth aiHealth;
 
         [HideInInspector]
         public Animator animator;
@@ -53,12 +52,12 @@ using baponkar.npc.zombie;
             }
             else
             {
-                Debug.Log("No player object with Player tag found!");
+                Debug.LogError("No player object with Player tag found!");
             }
 
             if(playerTransform != null)
             {
-                playerHealth = playerTransform.GetComponent<Health>();
+                
             }
             else
             {
@@ -70,7 +69,7 @@ using baponkar.npc.zombie;
             visonSensor = GetComponentInChildren<NPCVisonSensor>();
             soundSensor = GetComponentInChildren<NPCSoundSensor>();
             call = GetComponentInChildren<NPCCall>();
-            aiHealth = GetComponent<Health>();
+            aiHealth = GetComponent<ZombieHealth>();
             animator = GetComponentInChildren<Animator>();
             capsuleCollider = GetComponent<CapsuleCollider>();
             targetingSystem = GetComponent<NPCTargetingSystem>();

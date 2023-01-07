@@ -65,7 +65,7 @@ namespace baponkar.npc.zombie
         {
             memories.RemoveAll(m => m.age > olderThan); // Remove all memories older than olderThan
             memories.RemoveAll(m => !m.gameObject); // Remove all memories that have no gameObject
-            memories.RemoveAll(m => m.gameObject.GetComponent<Health>().isDead); // Remove all memories that already dead
+            //memories.RemoveAll(m => m.gameObject.GetComponent<Health>().isDead); // Remove all memories that already dead
             //memories.RemoveAll(m => m.gameObject.GetComponent<HitBox>().health.isDead); // Remove all memories that already dead
             // var toRemove = memories.Find(m => m.gameObject.GetComponent<Health>().isDead); // Remove all memories that already dead
             // if(toRemove != null) memories.Remove(toRemove); // Remove all memories that already dead
