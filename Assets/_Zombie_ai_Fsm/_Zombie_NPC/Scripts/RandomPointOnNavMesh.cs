@@ -2,32 +2,35 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RandomPointOnNavMesh : MonoBehaviour
+namespace baponkar.npc.zombie
 {
-    public float range = 10.0f;
-
-    public bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    public class RandomPointOnNavMesh : MonoBehaviour
     {
-        for (int i = 0; i < 30; i++)
+        public float range = 10.0f;
+
+        public bool RandomPoint(Vector3 center, float range, out Vector3 result)
         {
-            Vector3 randomPoint = center + Random.insideUnitSphere * range;
-            NavMeshHit hit;
-            if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+            for (int i = 0; i < 30; i++)
             {
-                result = hit.position;
-                return true;
+                Vector3 randomPoint = center + Random.insideUnitSphere * range;
+                NavMeshHit hit;
+                if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+                {
+                    result = hit.position;
+                    return true;
+                }
             }
+            result = Vector3.zero;
+            return false;
         }
-        result = Vector3.zero;
-        return false;
-    }
 
-    void Update()
-    {
-        Vector3 point;
-        if (RandomPoint(transform.position, range, out point))
+        void Update()
         {
-            Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+            Vector3 point;
+            if (RandomPoint(transform.position, range, out point))
+            {
+                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
+            }
         }
     }
 }

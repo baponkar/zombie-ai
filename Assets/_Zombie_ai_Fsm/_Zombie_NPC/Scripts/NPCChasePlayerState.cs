@@ -17,6 +17,7 @@ namespace baponkar.npc.zombie
         {
             agent.playerSeen = true;
             agent.navMeshAgent.isStopped = false;
+            
             agent.navMeshAgent.stoppingDistance = agent.config.attackRadius;
         }
 
@@ -40,6 +41,7 @@ namespace baponkar.npc.zombie
                 {
                     agent.animator.SetBool("isAttacking", false);
                     //agent.navMeshAgent.speed = agent.config.chaseWalkingSpeed + agent.config.offsetChaseSpeed;
+                    agent.animator.SetFloat("Speed", 5f);
                     agent.navMeshAgent.destination = agent.targetingSystem.TargetPosition;
                 }
                 else

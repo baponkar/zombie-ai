@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8936652678244394617}
   - component: {fileID: 8936652678244394622}
   - component: {fileID: 149471373364337165}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 149471373852958954}
   - component: {fileID: 149471373852958955}
   - component: {fileID: 149471373852958952}
-  m_Layer: 3
+  m_Layer: 1
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 117
+    m_Bits: 181
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 8936652677534439737}
   - component: {fileID: 8936652677534439739}
   - component: {fileID: 8936652677534439736}
-  m_Layer: 14
+  m_Layer: 9
   m_Name: Indicator_Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

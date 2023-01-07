@@ -5,14 +5,14 @@ using UnityEngine;
 public class NPCAttackSoundManager : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip clip;
-    // Start is called before the first frame update
+    public AudioClip [] clips;
+    
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
@@ -22,7 +22,7 @@ public class NPCAttackSoundManager : MonoBehaviour
     {
         if(!audioSource.isPlaying)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.PlayOneShot(clips[Random.Range(0,clips.Length)]);
         }
     }
 }

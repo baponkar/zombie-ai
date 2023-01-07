@@ -10,18 +10,18 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
+  - 
   - NPC
-  - Sensor
-  - Lighting
-  - Ground
-  - 
-  - 
-  - 
   - Character
   - Mini Map
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 

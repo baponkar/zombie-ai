@@ -8,16 +8,16 @@ namespace baponkar.npc.zombie
     public class NPCVisonSensor : MonoBehaviour
     {
         
-        public float distance = 10f;
+        public float distance = 20f;
         public float angle = 30f;
-        public float height = 1.0f;
+        public float height = 3.0f;
         public Color meshColor = Color.red;
         Mesh mesh;
 
         public int scanFrequency = 30;
 
         [Tooltip("The layers which find by the sensor")]
-        public LayerMask targetLayers;
+        public LayerMask targetLayers;// = LayerMask.GetMask("Character");
 
         public Vector3 sensorYOffset;
 
@@ -34,9 +34,11 @@ namespace baponkar.npc.zombie
                 return objects;
             }
         }
+
         private List<GameObject> objects = new List<GameObject>();
+
         [Tooltip("The layers which blocking sensor.")]
-        public LayerMask occlusionLayers;
+        public LayerMask occlusionLayers;// = LayerMask.GetMask("Default");
 
         void Start(){
             scanInterval = 1.0f/scanFrequency;

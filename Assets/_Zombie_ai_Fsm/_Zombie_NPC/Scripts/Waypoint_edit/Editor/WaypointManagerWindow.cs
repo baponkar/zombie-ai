@@ -8,7 +8,7 @@ namespace baponkar
     
     public class WaypointManagerWindow : EditorWindow
     {
-        [MenuItem("Tools/Traffic-System/Waypoint Manager")]
+        [MenuItem("Zombie Ai/Waypoint Manager")]
         public static void Open()
         {
             GetWindow<WaypointManagerWindow>("Waypoint Manager");
