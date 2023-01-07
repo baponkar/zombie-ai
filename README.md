@@ -13,14 +13,16 @@ A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See [De
 
 It has roughly following Characteristics:
 
-- [x] Zombie - Idle
-- [x] Zombie - Chase Player
-- [x] Zombie - Patrolling
-- [x] Zombie - Attack
-- [x] Zombie - Flee
-- [x] Zombie - Dead
+- [x] Zombie - Idle State.
+- [x] Zombie - Chasing Player  State
+- [x] Zombie - Patrolling State
+- [x] Zombie - Attack State
+- [x] Zombie - Flee State
+- [x] Zombie  - Dead State
+- [x] Zombie State - Waypoint based Patrolling. 
 - [x] Zombie - Call Near NPC to attack Player
-- [x] State Control by Behavior Tree and Statemachine[Both prefab have]
+- [ ] ~State Control by Behavior Tree~
+- [x] Statemachine[Both prefab have]
 - [x] Zombie - Sound Sensor
 - [x] Zombie - Vison Sensor
 - [x] Sensor Memory for Target
@@ -45,10 +47,11 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
 
 ---
 0. Add following layers in the following orders 
-Layer 3 - Player,Layer 6-NPC,Layer 7-Sensor,Layer 8-Lighting,Layer 9-Ground,Layer 13-Character, Layer 14-Mini Map
+Layer 3 - Player,Layer 6-NPC 13-Character, Layer 14-Mini Map
 1. NPC  : Change Default layer to NPC layer on Zombie Prefab.
  Change Tag NPC of Zombie Prefab.
 2. Player : Change "Default" layer to "Character" layer on Player Prefab.
+All indicator plane need to change into "Mini Map" Layer
 Change Tag of Player with "Player"
 3. Ground : Change Default layer to Ground layer on Ground Plain or Terrain or like that envirionment object.
 4. Change Vision Sensor(Which attached to the Zombie Prefab)'s target layer to 'Character'.
@@ -58,6 +61,7 @@ Change Tag of Player with "Player"
 8. Zombie also has attached a Health Script which can be damagable by external player which has a weapon which can be used to damage zombies health.
 9. Change or tweak zombie behavior by setting up zombie config scriptable object.
 10. To Change custom sensor detection layer edit 'NPCSensoryMemory.cs' file
+11. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
 
 ## ![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
 
