@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using baponkar.npc.zombie;
 
 
+
+namespace baponkar.npc.zombie
+{
     public class NPCAgent : MonoBehaviour
     {
         #region Variables
@@ -14,7 +16,7 @@ using baponkar.npc.zombie;
         public NPCStateMachine stateMachine;
         public NPCStateId initialState;
         [SerializeField] NPCStateId currentState;
-       
+
         [HideInInspector]
         public NavMeshAgent navMeshAgent;
         public NPCAgentConfig config;
@@ -22,7 +24,7 @@ using baponkar.npc.zombie;
         public NPCVisonSensor visonSensor;
         [HideInInspector]
         public NPCSoundSensor soundSensor;
-         [HideInInspector]
+        [HideInInspector]
         public NPCCall call;
         [HideInInspector]
         public ZombieHealth aiHealth;
@@ -36,8 +38,8 @@ using baponkar.npc.zombie;
 
         public GameObject waypoints;
         //public Transform attackOrigin;//This point to determine attack
-        
-        
+
+
         public bool playerSeen = false;
 
         [HideInInspector]
@@ -47,7 +49,7 @@ using baponkar.npc.zombie;
 
         void Start()
         {
-            if(playerTransform == null){
+            if (playerTransform == null) {
                 playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
             }
             else
@@ -55,9 +57,9 @@ using baponkar.npc.zombie;
                 Debug.LogError("No player object with Player tag found!");
             }
 
-            if(playerTransform != null)
+            if (playerTransform != null)
             {
-                
+
             }
             else
             {
@@ -73,7 +75,7 @@ using baponkar.npc.zombie;
             animator = GetComponentInChildren<Animator>();
             capsuleCollider = GetComponent<CapsuleCollider>();
             targetingSystem = GetComponent<NPCTargetingSystem>();
-            
+
             stateMachine = new NPCStateMachine(this);
             stateMachine.RegisterState(new NPCChasePlayerState());
             stateMachine.RegisterState(new NPCDeathState());
@@ -87,7 +89,7 @@ using baponkar.npc.zombie;
             stateMachine.ChangeState(initialState);
         }
 
-        
+
         void Update()
         {
             stateMachine.Update();
@@ -95,27 +97,27 @@ using baponkar.npc.zombie;
         }
 
         public void FaceTarget()
-        {  
+        {
             Vector3 direction = (targetingSystem.TargetPosition - navMeshAgent.transform.position).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation,Time.time* 720f);
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.time * 720f);
         }
 
         public void FacePlayer()
-        {  
+        {
             Vector3 direction = (playerTransform.position - navMeshAgent.transform.position).normalized;
-            Quaternion lookRotation = Quaternion.LookRotation(new Vector3 (direction.x,0,direction.z));
-            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation,Time.time* 720f);
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.time * 720f);
         }
 
-        
+
 
         public bool findThePlayer()
         {
             //finding Player by using only Vison Sensor
-            for (int i=0; i < visonSensor.Objects.Count;i++)
+            for (int i = 0; i < visonSensor.Objects.Count; i++)
             {
-                if(visonSensor.Objects[i].tag == "Player")
+                if (visonSensor.Objects[i].tag == "Player")
                 {
                     playerSeen = true;
                     return true;
@@ -127,9 +129,9 @@ using baponkar.npc.zombie;
         public bool FindThePlayerWithTargetingSystem()
         {
             //finding Player by using Targeting System
-            if(targetingSystem.HasTarget)
+            if (targetingSystem.HasTarget)
             {
-                if(targetingSystem.Target.tag == "Player")
+                if (targetingSystem.Target.tag == "Player")
                 {
                     playerSeen = true;
                     return true;
@@ -154,4 +156,5 @@ using baponkar.npc.zombie;
         //     }
         // }
     }
+}
 
