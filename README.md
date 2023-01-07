@@ -13,12 +13,13 @@ A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See [De
 
 It has roughly following Characteristics:
 
-- [x] Zombie - Idle
-- [x] Zombie - Chase Player
-- [x] Zombie - Patrolling
-- [x] Zombie - Attack
-- [x] Zombie - Flee
-- [x] Zombie - Dead
+- [x] Zombie - Idle State.
+- [x] Zombie - Chasing Player  State
+- [x] Zombie - Patrolling State
+- [x] Zombie - Attack State
+- [x] Zombie - Flee State
+- [x] Zombie  - Dead State
+- [x] Zombie State - Waypoint based Patrolling. 
 - [x] Zombie - Call Near NPC to attack Player
 - [ ] ~State Control by Behavior Tree~
 - [x] Statemachine[Both prefab have]
