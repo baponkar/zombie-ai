@@ -29,11 +29,12 @@ namespace baponkar.npc.zombie
         void NPCState.Enter(NPCAgent agent)
         {
             navMeshPath = new NavMeshPath();
-            agent.navMeshAgent.isStopped = false;
 
+            agent.navMeshAgent.isStopped = false;
             agent.navMeshAgent.speed = agent.config.alertSpeed;
             agent.navMeshAgent.acceleration = agent.config.alertAcceleration;
             agent.navMeshAgent.angularSpeed  = agent.config.alertTurnSpeed;
+
             maxTime = agent.config.alertWaitTime;
             initialPosition = agent.transform.position;
         }

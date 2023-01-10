@@ -16,9 +16,12 @@ namespace baponkar.npc.zombie
         void NPCState.Enter(NPCAgent agent)
         {
             agent.playerSeen = true;
+            //NavMeshAgent variables controls
             agent.navMeshAgent.isStopped = false;
-            
-            agent.navMeshAgent.stoppingDistance = agent.config.attackRadius;
+            agent.navMeshAgent.speed = agent.config.chaseSpeed;
+            agent.navMeshAgent.acceleration = agent.config.chaseAcceleration;
+            //agent.navMeshAgent.stoppingDistance = agent.config.attackRadius;
+            agent.animator.Play("Zombie Scream");
         }
 
         void NPCState.Exit(NPCAgent agent)
@@ -40,8 +43,6 @@ namespace baponkar.npc.zombie
                 if (distance > agent.config.attackRadius)
                 {
                     agent.animator.SetBool("isAttacking", false);
-                    //agent.navMeshAgent.speed = agent.config.chaseWalkingSpeed + agent.config.offsetChaseSpeed;
-                    agent.animator.SetFloat("Speed", 5f);
                     agent.navMeshAgent.destination = agent.targetingSystem.TargetPosition;
                 }
                 else

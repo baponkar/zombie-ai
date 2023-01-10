@@ -17,44 +17,36 @@ namespace baponkar.npc.zombie
         public NPCStateId initialState;
         [SerializeField] NPCStateId currentState;
 
-        [HideInInspector]
-        public NavMeshAgent navMeshAgent;
+        [HideInInspector]  public NavMeshAgent navMeshAgent;
         public NPCAgentConfig config;
-        [HideInInspector]
-        public NPCVisonSensor visonSensor;
-        [HideInInspector]
-        public NPCSoundSensor soundSensor;
-        [HideInInspector]
-        public NPCCall call;
-        [HideInInspector]
-        public ZombieHealth aiHealth;
+        [HideInInspector] public NPCVisonSensor visonSensor;
+        [HideInInspector] public NPCSoundSensor soundSensor;
+        [HideInInspector] public NPCCall call;
+        [HideInInspector] public ZombieHealth aiHealth;
 
-        [HideInInspector]
-        public Animator animator;
-        [HideInInspector]
-        public CapsuleCollider capsuleCollider;
-        [HideInInspector]
-        public NPCTargetingSystem targetingSystem;
+        [HideInInspector] public Animator animator;
+        [HideInInspector] public CapsuleCollider capsuleCollider;
+        [HideInInspector] public NPCTargetingSystem targetingSystem;
 
-        public GameObject waypoints;
+        public GameObject waypoints = null;
         //public Transform attackOrigin;//This point to determine attack
-
 
         public bool playerSeen = false;
 
-        [HideInInspector]
-        public Vector3 initialPosition; //storeing the initial position of the zombie.
+        //storeing the initial position of the zombie.
+        [HideInInspector] public Vector3 initialPosition;
 
+        public float maxSpeed = 0;
         #endregion
 
-        void Start()
+        void Awake()
         {
             if (playerTransform == null) {
                 playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
             }
             else
             {
-                Debug.LogError("No player object with Player tag found!");
+                Debug.LogError("No player object with Player tag found!" + this.gameObject.name.ToString());
             }
 
             if (playerTransform != null)
@@ -63,7 +55,12 @@ namespace baponkar.npc.zombie
             }
             else
             {
-                Debug.LogError("Player Health is not assigned!");
+                Debug.LogError("Player Health is not assigned!" + this.gameObject.name.ToString());
+            }
+
+            if(waypoints == null)
+            {
+                Debug.LogError("No Waypoint Assigned to this" + this.gameObject.name.ToString());
             }
 
             initialPosition = this.transform.position;
@@ -87,6 +84,11 @@ namespace baponkar.npc.zombie
             stateMachine.RegisterState(new NPCWaypointBasedPatrolState());
 
             stateMachine.ChangeState(initialState);
+        }
+
+        private void Start()
+        {
+            
         }
 
 

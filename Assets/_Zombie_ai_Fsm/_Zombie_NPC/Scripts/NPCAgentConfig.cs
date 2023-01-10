@@ -6,7 +6,7 @@ namespace baponkar.npc.zombie
     public class NPCAgentConfig : ScriptableObject
     {
         
-        [Header("Patrol.")]
+        [Header("Patrol State Variables.")]
         public float patrolRadius = 10f;
         public float patrolSpeed = 3f;
         public float patrolAcceleration = 8f;
@@ -14,10 +14,9 @@ namespace baponkar.npc.zombie
         [Range(0.0f, 2.0f)]
         public float patrolWaitTime = 1f;
 
-        [Header("Waypoints Based Patrol")]
-        public GameObject waypoints;
+   
 
-        [Header("Alert!")]
+        [Header("Alert State Variables!")]
         public float alertRadius = 20f;
         public float alertSpeed = 4f;
         public float alertAcceleration = 20f;
@@ -26,26 +25,20 @@ namespace baponkar.npc.zombie
         public float alertWaitTime = 1f;
 
 
-        [Header("Attack")]
-        [Range(0.0f, 2.5f)]
-        public float offsetAttackRadius = 5f;
-        public float attackRadius = 20f;
-        public float attackTurnSpeed = 5f;
-        [Range(0.0f, 2.0f)]
-        public float offsetAttackSpeed = 0.5f;
-        public float attackWalkingSpeed = 2f;
+        [Header("Attack State Variables")]
+        public float attackRadius = 2f;       
         public float attackDamage = 10f;
         public float attackTime = 1.0f;
 
-        [Header("Chase")]
+        [Header("Chase State Variables")]
+        public float chaseRadius = 20f;
+        public float chaseSpeed = 2f;
+        public float chaseAcceleration = 30f;
+        public float chaseTurnSpeed = 720f;
         [Range(0.0f, 2.0f)]
         public float chaseWaitTime = 1.0f;
-        public float offsetChaseRadius = 2.5f;
-        public float chaseRadius = 20f;
-        public float chaseTurnSpeed = 5f;
-        public float chaseWalkingSpeed = 2f;
 
-        [Header("Flee")]
+        [Header("Flee State Variables")]
         [Range(0.0f, 30.0f)]
         public float fleeRange = 30f;
     }

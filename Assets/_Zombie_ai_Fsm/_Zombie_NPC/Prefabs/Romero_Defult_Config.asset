@@ -10,30 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7bdedcc21c6f124bb930ed641537f34, type: 3}
-  m_Name: NPC_Agent_Configaration
+  m_Name: Romero_Defult_Config
   m_EditorClassIdentifier: 
-  patrolRadius: 15
-  patrolSpeed: 3
+  patrolRadius: 10
+  patrolSpeed: 2
   patrolAcceleration: 8
-  patrolTurnSpeed: 320
+  patrolTurnSpeed: 520
   patrolWaitTime: 1
-  waypoints: {fileID: 7244450529012751680, guid: b4aec6c486e996e4883e615a010d6217,
-    type: 3}
   alertRadius: 20
-  alertSpeed: 5
+  alertSpeed: 3
   alertAcceleration: 20
   alertTurnSpeed: 720
   alertWaitTime: 1
-  offsetAttackRadius: 0
   attackRadius: 2
-  attackTurnSpeed: 5
-  offsetAttackSpeed: 0
-  attackWalkingSpeed: 2
   attackDamage: 10
   attackTime: 1
-  chaseWaitTime: 1
-  offsetChaseRadius: 0
   chaseRadius: 20
-  chaseTurnSpeed: 5
-  chaseWalkingSpeed: 2
+  chaseSpeed: 4
+  chaseAcceleration: 30
+  chaseTurnSpeed: 720
+  chaseWaitTime: 1
   fleeRange: 30

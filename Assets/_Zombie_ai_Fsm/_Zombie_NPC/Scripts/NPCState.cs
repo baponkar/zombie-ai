@@ -13,7 +13,6 @@ namespace baponkar.npc.zombie
         Flee,
         Alert,
         WaypointPatrol
-
     }
     public interface NPCState 
     {

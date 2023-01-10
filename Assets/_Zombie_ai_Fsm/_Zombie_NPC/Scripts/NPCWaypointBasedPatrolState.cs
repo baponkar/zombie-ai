@@ -16,9 +16,18 @@ namespace baponkar.npc.zombie
         }
         void NPCState.Enter(NPCAgent agent)
         {
-            currentWaypoint = agent.config.waypoints.GetComponentInChildren<Waypoint>();
-            direction = Mathf.RoundToInt(Random.Range(0f,1f));
-            agent.navMeshAgent.SetDestination(currentWaypoint.GetPosition());
+            var pnt = agent.waypoints;
+            
+            if(pnt != null)
+            {
+                currentWaypoint = pnt.transform.GetChild(0).GetComponent<Waypoint>();
+                direction = Mathf.RoundToInt(Random.Range(0f,1f));
+                agent.navMeshAgent.SetDestination(currentWaypoint.GetPosition());
+            }
+            else
+            {
+                agent.stateMachine.ChangeState(NPCStateId.Patrol);
+            }
         }
 
         void NPCState.Exit(NPCAgent agent)

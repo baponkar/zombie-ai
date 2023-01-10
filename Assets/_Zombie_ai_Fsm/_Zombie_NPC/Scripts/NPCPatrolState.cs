@@ -31,11 +31,12 @@ namespace baponkar.npc.zombie
         {
             randomPointOnNavMesh = new RandomPointOnNavMesh();
             navMeshPath = new NavMeshPath();
-            agent.navMeshAgent.isStopped = false;
 
+            agent.navMeshAgent.isStopped = false;
             agent.navMeshAgent.speed = agent.config.patrolSpeed;
             agent.navMeshAgent.acceleration = agent.config.patrolAcceleration;
             agent.navMeshAgent.angularSpeed  = agent.config.patrolTurnSpeed;
+
             maxTime = agent.config.patrolWaitTime;
             initialPosition = agent.transform.position;
         }
