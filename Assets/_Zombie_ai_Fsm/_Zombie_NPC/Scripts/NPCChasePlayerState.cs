@@ -21,7 +21,7 @@ namespace baponkar.npc.zombie
             agent.navMeshAgent.speed = agent.config.chaseSpeed;
             agent.navMeshAgent.acceleration = agent.config.chaseAcceleration;
             //agent.navMeshAgent.stoppingDistance = agent.config.attackRadius;
-            agent.animator.Play("Zombie Scream");
+            //agent.animator.Play("Zombie Scream");
         }
 
         void NPCState.Exit(NPCAgent agent)

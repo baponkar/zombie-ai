@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Romero_1_Config
   m_EditorClassIdentifier: 
   patrolRadius: 12
-  patrolSpeed: 2
+  patrolSpeed: 1
   patrolAcceleration: 5
   patrolTurnSpeed: 450
   patrolWaitTime: 1.31
   alertRadius: 20
-  alertSpeed: 3
+  alertSpeed: 1
   alertAcceleration: 20
   alertTurnSpeed: 620
   alertWaitTime: 2.16
