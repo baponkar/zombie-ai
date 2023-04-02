@@ -15,6 +15,8 @@ A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See
 
 * [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
 
+* Download : [v2.3.2-stable](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.2)
+
 It has roughly following Characteristics:
 
 - [x] Zombie - Idle State.
