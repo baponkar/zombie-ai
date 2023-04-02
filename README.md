@@ -3,7 +3,7 @@
 ![C#](https://img.shields.io/badge/C-%23-lightgrey)
 ![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
-![star](https://img.shields.io/github/stars/baponkar/zombie-ai)
+[![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
 ![License](https://img.shields.io/github/license/baponkar/zombie-ai)
 
 
