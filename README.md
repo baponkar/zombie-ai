@@ -3,13 +3,19 @@
 ![C#](https://img.shields.io/badge/C-%23-lightgrey)
 ![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
-![star](https://img.shields.io/github/stars/baponkar/zombie-ai)
-![License](https://img.shields.io/github/license/baponkar/zombie-ai)
+[![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
+[![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
 
 
 
 # <span style="color:blue">Zombie AI for Unity Engine </span>.
-A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
+A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See 
+
+* [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), 
+
+* [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
+
+* Download : [v2.3.2-stable](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.2)
 
 It has roughly following Characteristics:
 
