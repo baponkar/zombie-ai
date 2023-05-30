@@ -23,7 +23,7 @@ Version : 1.0.0
 Platform : Unity Engine 2020.3.15f2
 Writer : Bapon Kar
 Last Update : 30.04.2022
-Contact : trynewz60@gmail.com, https://github.com/baponkar
+Contact : trynewz75@gmail.com, https://github.com/baponkar
 
 Thankyou for downloading this assets.
 
