@@ -47,27 +47,42 @@ It has roughly following Characteristics:
 
 
 ## Doc :
-This is complete Unity Project if You download this project and open it then it will works perfectly.
-If you use this project with your old project then first put 'Asset' folder in your project.
+This is complete Unity Project with included a DemoScene, if You download this project and open it with Unity then it will works perfectly.
+If you use this project with your old project then first put '_Zombie_ai_Fsm' folder in your project.
 Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.
 
 ---
-0. Add following layers in the following orders 
-Layer 3 - Player,Layer 6-NPC 13-Character, Layer 14-Mini Map
-1. NPC  : Change Default layer to NPC layer on Zombie Prefab.
- Change Tag NPC of Zombie Prefab.
-2. Player : Change "Default" layer to "Character" layer on Player Prefab.
-All indicator plane need to change into "Mini Map" Layer
-Change Tag of Player with "Player"
-3. Ground : Change Default layer to Ground layer on Ground Plain or Terrain or like that envirionment object.
-4. Change Vision Sensor(Which attached to the Zombie Prefab)'s target layer to 'Character'.
-5. Change All Occulation layer of Vision Sensor(Which attached to the Zombie Prefab) to Default,Ground etc all occulation layer have in your scene.
-6. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
-7. Now put zombie prefab and player prefab in your scene.Player has attached a Health script which is damageable by Zombie.
-8. Zombie also has attached a Health Script which can be damagable by external player which has a weapon which can be used to damage zombies health.
-9. Change or tweak zombie behavior by setting up zombie config scriptable object.
-10. To Change custom sensor detection layer edit 'NPCSensoryMemory.cs' file
-11. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
+1. Add following layers in the following orders 
+-[x] Layer 3 - **Player**
+-[x] Layer 6 - **NPC**
+-[x] Layer 13 - **Character**
+-[x] Layer 14 - **Mini Map**
+
+2. NPC  : Change Default layer of  Zombie/Romero Prefab into **NPC**, and also
+ Change Tag  of  Zombie/Romero Prefab into **NPC**.
+
+3. Change Layer of **Player** into **Character** which will be seen by NPCs, and also
+Change Tag of **Player** with "**Player**".
+
+4. Change Layer of all prefabs **indicator plane** into "**Mini Map**" Layer.Which will be seen only by Mini Map Camera.
+
+5. See **NPCVisionSensor** Script which attached with npcs i.e. zombie/Romero prefabs and change its **Occulation Layer** with corresponding
+**Ground Layer** i.e. if ground plain be **Defult** then change into **Defult** Layer.
+
+6. See NPCVisionSensor Script which attached with npcs i.e. zombie/Romero prefabs and change its **Target Layer** into **Character** Layer which is the Layer of Player.So npcs see the player by visionsensor.
+
+
+7. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
+
+8. Now put zombie prefab and player prefab in your scene.Player has attached a Health script which is damageable by Zombie/Romero.
+
+9. Zombie also has attached a Health Script which can be damagable by external player which has a weapon which can be used to damage zombies health.
+
+10. Change or tweak zombie behavior by setting up zombie config scriptable object.
+
+11. To Change custom sensor detection layer edit 'NPCSensoryMemory.cs' file
+
+12. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
 
 ## ![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
 
