@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7bdedcc21c6f124bb930ed641537f34, type: 3}
-  m_Name: Romero_Defult_Config
+  m_Name: Config_1
   m_EditorClassIdentifier: 
-  patrolRadius: 10
-  patrolSpeed: 2
-  patrolAcceleration: 8
-  patrolTurnSpeed: 520
-  patrolWaitTime: 1
+  patrolRadius: 12
+  patrolSpeed: 1
+  patrolAcceleration: 5
+  patrolTurnSpeed: 450
+  patrolWaitTime: 1.31
   alertRadius: 20
-  alertSpeed: 3
+  alertSpeed: 1
   alertAcceleration: 20
-  alertTurnSpeed: 720
-  alertWaitTime: 1
-  attackRadius: 2
+  alertTurnSpeed: 620
+  alertWaitTime: 2.16
+  attackRadius: 2.4
   attackDamage: 10
-  attackTime: 1
+  attackTime: 1.5
   chaseRadius: 20
-  chaseSpeed: 4
+  chaseSpeed: 2
   chaseAcceleration: 30
   chaseTurnSpeed: 720
   chaseWaitTime: 1

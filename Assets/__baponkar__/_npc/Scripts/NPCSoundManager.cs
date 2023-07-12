@@ -57,7 +57,7 @@ namespace baponkar.npc.zombie
 
             if (!mouthAudio.isPlaying)
             {
-                handAudioR.PlayOneShot(attackMouthClips[Random.Range(0, handClips.Length)]);
+                //handAudioR.PlayOneShot(attackMouthClips[Random.Range(0, handClips.Length)]);
             }
         }
     }
