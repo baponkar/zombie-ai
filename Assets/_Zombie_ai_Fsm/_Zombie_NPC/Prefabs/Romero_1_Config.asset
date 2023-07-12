@@ -26,7 +26,7 @@ MonoBehaviour:
   attackDamage: 10
   attackTime: 1.5
   chaseRadius: 20
-  chaseSpeed: 4
+  chaseSpeed: 2
   chaseAcceleration: 30
   chaseTurnSpeed: 720
   chaseWaitTime: 1

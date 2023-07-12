@@ -21,7 +21,7 @@ namespace baponkar.npc.zombie
             maxSpeed = Mathf.Max(agent.config.chaseSpeed, 
                 agent.config.alertSpeed, 
                 agent.config.patrolSpeed);
-            Debug.Log(maxSpeed);
+            
         }
 
         void Update()

@@ -56,7 +56,9 @@ namespace baponkar.npc.zombie
                 {*/
                     if(agent.targetingSystem.HasTarget && agent.targetingSystem.TargetDistance <= agent.config.attackRadius)
                     {
-                        if(timer <= 0f )
+                        
+                        
+                    if (timer <= 0f )
                         {
                             Attack(agent);
                             timer = attackTime;
@@ -82,14 +84,16 @@ namespace baponkar.npc.zombie
 
         private void Attack(NPCAgent agent)
         {
+            agent.transform.LookAt(agent.playerTransform.position);
             direction = (agent.playerTransform.position - agent.transform.position).normalized;
             var raycast = Physics.Raycast(agent.transform.position, direction, out hit, agent.config.attackRadius);
 
             if(raycast)
             {
-                if(hit.collider.gameObject.tag == "Player" )
+                Debug.Log("Attacking : " + hit.transform.name);
+                if (hit.collider.gameObject.tag == "Player" )
                 {
-                    Debug.Log("Attacking");
+
                     
                 }
             }

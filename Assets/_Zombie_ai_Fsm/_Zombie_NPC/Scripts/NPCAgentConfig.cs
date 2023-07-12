@@ -29,6 +29,7 @@ namespace baponkar.npc.zombie
         public float attackRadius = 2f;       
         public float attackDamage = 10f;
         public float attackTime = 1.0f;
+        public Vector3 attackPositionCorection = Vector3.zero;
 
         [Header("Chase State Variables")]
         public float chaseRadius = 20f;

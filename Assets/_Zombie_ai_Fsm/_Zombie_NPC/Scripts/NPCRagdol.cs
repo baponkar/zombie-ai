@@ -6,12 +6,12 @@ namespace baponkar.npc.zombie
 {
     public class NPCRagdol : MonoBehaviour
     {
-        Rigidbody [] rigidBody;
+        Rigidbody [] rigidBodies;
         Animator anim;
         
         void Start()
         {
-            rigidBody = GetComponentsInChildren<Rigidbody>();
+            rigidBodies = GetComponentsInChildren<Rigidbody>();
             anim = GetComponent<Animator>();
             DeActivateRagdol();
         }
@@ -24,7 +24,7 @@ namespace baponkar.npc.zombie
         public void DeActivateRagdol()
         {
             anim.enabled = true;
-            foreach(Rigidbody rb in rigidBody)
+            foreach(Rigidbody rb in rigidBodies)
             {
                 rb.isKinematic = true;
             }
@@ -33,7 +33,7 @@ namespace baponkar.npc.zombie
         public void ActivateRagdol()
         {
             anim.enabled = false;
-            foreach(Rigidbody rb in rigidBody)
+            foreach(Rigidbody rb in rigidBodies)
             {
                 rb.isKinematic = false;
             }

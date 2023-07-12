@@ -12,6 +12,8 @@ namespace baponkar.npc.zombie
         public float angleWeight = 1.0f;
         public float ageWeight = 1.0f;
 
+        
+
         public bool HasTarget 
         {
             get 
@@ -27,7 +29,7 @@ namespace baponkar.npc.zombie
             {
                 if(HasTarget)
                 {
-                    return bestMemory.gameObject; 
+                    return bestMemory.gameObject ; 
                 }
                 else
                 {
@@ -42,7 +44,7 @@ namespace baponkar.npc.zombie
             { 
                 if(HasTarget)
                 {
-                    return bestMemory.gameObject.transform.position;
+                    return bestMemory.gameObject.transform.position + agent.config.attackPositionCorection;
                 } 
                 else 
                 {
@@ -82,11 +84,12 @@ namespace baponkar.npc.zombie
         }
         NPCSensoryMemory memory = new NPCSensoryMemory(10);
         NPCVisonSensor sensor;
-        
+        NPCAgent agent;
         
         void Start()
         {
             sensor = GetComponent<NPCVisonSensor>();
+            agent = GetComponent<NPCAgent>();
         }
 
         void Update()

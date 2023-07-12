@@ -15,7 +15,7 @@ namespace baponkar.npc.zombie
         public Transform playerTransform;
         public NPCStateMachine stateMachine;
         public NPCStateId initialState;
-        [SerializeField] NPCStateId currentState;
+        [SerializeField] public NPCStateId currentState;
 
         [HideInInspector]  public NavMeshAgent navMeshAgent;
         public NPCAgentConfig config;
