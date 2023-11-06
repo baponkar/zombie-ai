@@ -92,7 +92,7 @@ namespace baponkar.npc.zombie
         Mesh CreateWedgeMesh(){
             Mesh mesh = new Mesh();
             int segments = 10;
-            int numTriangles = (segments*4)+2+2; //each segments has 4 verices and 2 up and 2 downside
+            int numTriangles = (segments*4)+2+2; //each segment have 4 verices and 2 up and 2 downside
             int numVertices = numTriangles*3;
 
             Vector3 [] vertices = new Vector3[numVertices];
