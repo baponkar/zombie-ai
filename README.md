@@ -9,8 +9,10 @@
 
 
 # <span style="color:blue">Zombie AI for Unity Engine </span>.
-A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See 
+A *Fully State Machine* and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
+</span>
 
+See 
 * [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), 
 
 * [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
