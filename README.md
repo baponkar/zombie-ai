@@ -99,7 +99,8 @@ Change Tag of **Player** with "**Player**".
 
 * This Project has a Demo Scene with necessary setup.
 ## License:
-[GNU GPL v-3.0 License](LICENSE.md)
+* [GNU GPL v-3.0 License](LICENSE.md)
+But you are requested to see the delendency assets licences.
 
 ## Credits :
 1. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
