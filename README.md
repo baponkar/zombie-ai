@@ -10,7 +10,7 @@
 
 # Zombie NPC or Zombie AI for Unity Game Engine
 
-* A Fully State Machine* and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
+* A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
 
 
 See 
