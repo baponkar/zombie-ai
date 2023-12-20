@@ -50,17 +50,17 @@ It has roughly following Characteristics:
 
 
 ## Documentation :
-* This is complete Unity Project with included depending assets and also included a Demo Scene.
+* This is a complete Unity Project with included depending assets and also included a Demo Scene.
 
-* If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence then you should add corresponding layers and set by the below instruction.
+* If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence in the project then you need to add  corresponding layers and set by the below instruction.
 
 
-* If you use this project with your old project then first put '_Zombie_ai_Fsm' folder in your project.
-Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.
+* If you use this project with your old project then first put '_Zombie_ai_Fsm' folder in your project then create and add the layers in your project by below instruction.
+Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.Vison Sensor have a sensory memory to memorize sense which can be set by config scriptable object.
 
-* vison sensor can sense **Character** layers.
+* vison sensor can sense **Character** layers which is attached to the player prefab.
 
-* The Zombie have different inter related states you can manage those states by settings config.
+* The NPC Zombie have different inter related states you can manage those states by set up in config scriptable object found in the project.
 
 * Project setup instructions:
 ---
@@ -82,7 +82,7 @@ Change Tag of **Player** with "**Player**".
 5. See **NPCVisionSensor** Script which attached with npcs i.e. zombie/Romero prefabs and change its **Occulation Layer** with corresponding
 **Ground Layer** i.e. if ground plain be **Defult** then change into **Defult** Layer.
 
-6. See NPCVisionSensor Script which attached with npcs i.e. zombie/Romero prefabs and change its **Target Layer** into **Character** Layer which is the Layer of Player.So npcs see the player by visionsensor.
+6. See NPCVisionSensor.cs Script which attached with npcs i.e. zombie/Romero prefabs and change its **Target Layer** into **Character** Layer which is the Layer of Player.So NPCs can see the player by vision sensor.
 
 
 7. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
@@ -134,3 +134,4 @@ Unity 2020.3.15f2 or higher version.
 ## Contact
 ![Twitter](https://img.shields.io/twitter/follow/kar_bapon?style=social)
 ![Github](https://img.shields.io/github/followers/baponkar?style=social)
+💌 baponkar@gmail.com
