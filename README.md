@@ -53,10 +53,11 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
 
 ---
 1. Add following layers in the following orders 
--[x] Layer 3 - **Player**
--[x] Layer 6 - **NPC**
--[x] Layer 13 - **Character**
--[x] Layer 14 - **Mini Map**
+
+- [x] Layer 3 - **Player**
+- [x] Layer 6 - **NPC**
+- [x] Layer 13 - **Character**
+- [x] Layer 14 - **Mini Map**
 
 2. NPC  : Change Default layer of  Zombie/Romero Prefab into **NPC**, and also
  Change Tag  of  Zombie/Romero Prefab into **NPC**.
