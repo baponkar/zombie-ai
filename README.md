@@ -46,10 +46,10 @@ It has roughly following Characteristics:
 ## ![ScreenShots of behavior tree](ScreenShots/Zombie_behavior_tree.png)
 
 
-## Doc :
+## Documentation :
 * This is complete Unity Project with included depending assets and also included a Demo Scene.
 
-### **if You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence then you should add corresponding layers and set by the below instruction.**
+* If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence then you should add corresponding layers and set by the below instruction.
 
 
 * If you use this project with your old project then first put '_Zombie_ai_Fsm' folder in your project.
@@ -59,6 +59,7 @@ Zombie NPC is a navmesh agent which detect player by using vision sensor and sou
 
 * The Zombie have different inter related states you can manage those states by settings config.
 
+* Project setup instructions:
 ---
 1. Add following layers in the following orders 
 
