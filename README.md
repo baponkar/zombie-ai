@@ -85,7 +85,8 @@ Change Tag of **Player** with "**Player**".
 
 12. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
 
-## ![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
+## Zombie sensor sense *Character* Layer for this NPCSensoryMemory.cs Script.
+![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
 
 * This Project has a Demo Scene with necessary setup.
 ## License:
