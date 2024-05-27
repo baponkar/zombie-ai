@@ -8,14 +8,17 @@
 
 
 
-# <span style="color:blue">Zombie AI for Unity Engine </span>.
-A FSM and Behavior Tree based Zombie NPC Unity Project with a Demo Scene.See 
+# Zombie NPC or Zombie AI for Unity Game Engine
 
+* A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
+
+
+See 
 * [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), 
 
 * [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
 
-* Download : [v2.3.2-stable](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.2)
+* Download : [v2.3.2-stable](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.3)
 
 It has roughly following Characteristics:
 
@@ -46,17 +49,27 @@ It has roughly following Characteristics:
 ## ![ScreenShots of behavior tree](ScreenShots/flowchart.png)
 
 
-## Doc :
-This is complete Unity Project with included a DemoScene, if You download this project and open it with Unity then it will works perfectly.
-If you use this project with your old project then first put '_Zombie_ai_Fsm' folder in your project.
-Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.
+## Documentation :
+* This is a complete Unity Project with included depending assets and also included a Demo Scene.
 
+* If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence in the project then you need to add  corresponding layers and set by the below instruction.
+
+
+* If you use this project with your old project then first put '_Zombie_ai_Fsm' folder in your project then create and add the layers in your project by below instruction.
+Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.Vison Sensor have a sensory memory to memorize sense which can be set by config scriptable object.
+
+* vison sensor can sense **Character** layers which is attached to the player prefab.
+
+* The NPC Zombie have different inter related states you can manage those states by set up in config scriptable object found in the project.
+
+* Project setup instructions:
 ---
 1. Add following layers in the following orders 
--[x] Layer 3 - **Player**
--[x] Layer 6 - **NPC**
--[x] Layer 13 - **Character**
--[x] Layer 14 - **Mini Map**
+
+- [x] Layer 3 - **Player**
+- [x] Layer 6 - **NPC**
+- [x] Layer 13 - **Character**
+- [x] Layer 14 - **Mini Map**
 
 2. NPC  : Change Default layer of  Zombie/Romero Prefab into **NPC**, and also
  Change Tag  of  Zombie/Romero Prefab into **NPC**.
@@ -69,7 +82,7 @@ Change Tag of **Player** with "**Player**".
 5. See **NPCVisionSensor** Script which attached with npcs i.e. zombie/Romero prefabs and change its **Occulation Layer** with corresponding
 **Ground Layer** i.e. if ground plain be **Defult** then change into **Defult** Layer.
 
-6. See NPCVisionSensor Script which attached with npcs i.e. zombie/Romero prefabs and change its **Target Layer** into **Character** Layer which is the Layer of Player.So npcs see the player by visionsensor.
+6. See NPCVisionSensor.cs Script which attached with npcs i.e. zombie/Romero prefabs and change its **Target Layer** into **Character** Layer which is the Layer of Player.So NPCs can see the player by vision sensor.
 
 
 7. Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).
@@ -84,11 +97,13 @@ Change Tag of **Player** with "**Player**".
 
 12. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
 
-## ![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
+## Zombie sensor sense *Character* Layer for this NPCSensoryMemory.cs Script.
+![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
 
 * This Project has a Demo Scene with necessary setup.
 ## License:
-[GNU GPL v-3.0 License](LICENSE.md)
+* [GNU GPL v-3.0 License](LICENSE.md)
+But you are requested to see the delendency assets licences.
 
 ## Credits :
 1. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
@@ -119,3 +134,4 @@ Unity 2020.3.15f2 or higher version.
 ## Contact
 ![Twitter](https://img.shields.io/twitter/follow/kar_bapon?style=social)
 ![Github](https://img.shields.io/github/followers/baponkar?style=social)
+💌 baponkar@gmail.com
