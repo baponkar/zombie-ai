@@ -1,6 +1,6 @@
-![Unity 2020 Badge](https://img.shields.io/badge/Unity-2020-blue)
+![Static Badge](https://img.shields.io/badge/Unity-2020-maker?logo=unity)
 ![FPS](https://img.shields.io/badge/FPS-for%20Unity-blue)
-![C#](https://img.shields.io/badge/C-%23-lightgrey)
+![CSharp Badge](https://img.shields.io/badge/C%23-maker?logo=csharp)
 ![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
