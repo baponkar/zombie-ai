@@ -5,7 +5,9 @@
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
 [![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
-<img src="ScreenShots/share_icon.png" alt="Screenshot 0" width="20" height="20">
+<a href="https://baponkar.github.io/zombie-ai">
+ <img src="ScreenShots/share_icon.png" alt="Screenshot 0" width="20" height="20">
+</a>
 
 # Zombie NPC or Zombie AI for Unity Game Engine
 
