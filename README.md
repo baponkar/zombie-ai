@@ -6,8 +6,10 @@
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
 [![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
 <a href="https://baponkar.github.io/zombie-ai">
- <img src="ScreenShots/share_icon.png" alt="Screenshot 0" width="20" height="20">
+ <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
 </a>
+
+ <img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" width="300" height="auto">
 
 # Zombie NPC or Zombie AI for Unity Game Engine
 
