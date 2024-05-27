@@ -106,6 +106,25 @@ Change Tag of **Player** with "**Player**".
 12. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
 
 ## Zombie sensor sense *Character* Layer for this NPCSensoryMemory.cs Script.
+Find **"NPCSensoryMemory.cs"** Script inside Scripts folder.
+* Zombie_Ai
+   * Assets
+      - Zombie_ai
+         - Zombie_NPC
+            - Scripts
+               -  NPCSensoryMemory.cs
+
+```csharp
+   ...
+   public void UpdateSenses(NPCVisionSensor sensor)
+   {
+      int targets = sensor.Filter(characters, 'TargetLayer');
+      //Here put the player layer name in 'TargetLayer'
+      //Here I have use 'Character' as Player Object Layer is that.
+      ....
+   }
+```
+
 <img src="ScreenShots/set_sensor_layer.png" alt="Changing Target Layer" width="300" height="300">
 
 
