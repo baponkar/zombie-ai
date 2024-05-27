@@ -43,7 +43,7 @@ It has roughly following Characteristics:
 
 ## Behavior Tree
 ## ![ScreenShots of behavior tree](ScreenShots/behavior_tree.png)
-## ![ScreenShots of behavior tree](ScreenShots/Zombie_behavior_tree.png)
+## ![ScreenShots of behavior tree](ScreenShots/flowchart.png)
 
 
 ## Doc :
