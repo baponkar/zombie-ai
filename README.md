@@ -14,11 +14,14 @@
 
 
 See 
-* [Demo for 2.0.0](https://www.youtube.com/watch?v=JxbXT3MU_9M), 
+* [![Static Badge](https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
+](https://www.youtube.com/watch?v=JxbXT3MU_9M)
 
-* [Demo for 1.0.0](https://www.youtube.com/watch?v=486w7NuyBWo).
+* [![Static Badge](https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
+](https://www.youtube.com/watch?v=486w7NuyBWo)
 
-* Download : [v2.3.2-stable](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.3)
+* [![Static Badge](https://img.shields.io/badge/download-v2.3.2-maker?style=flat-square&logoColor=red&color=red)
+](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.3)
 
 It has roughly following Characteristics:
 
@@ -40,20 +43,18 @@ It has roughly following Characteristics:
 - [x] Walking Audio 
 - [x] Camera Shake
 
-<img src="ScreenShots/screenshot_with_weapon.png" alt="Screenshot 0" width="600" height="600">
-
-<img src="ScreenShots/Screenshot1.png" alt="Screenshot 1" width="600" height="600">
-
-<img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Screenshot 2" width="600" height="600">
+<img src="ScreenShots/screenshot_with_weapon.png" alt="Screenshot 0" width="150" height="150"><img src="ScreenShots/Screenshot1.png" alt="Screenshot 1" width="150" height="150"><img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Screenshot 2" width="150" height="150"><img src="ScreenShots/screenshot_4.png" alt="Screenshot 2" width="150" height="150">
 
 
+
+## [Flowchart of State Transition](https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing)
+<a href="https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing">
+<img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="300" height="auto">
+</a>
 
 ## Behavior Tree
-<img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="600" height="600">
+<img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto">
 
-<img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="600" height="600">
-## ![ScreenShots of behavior tree]()
-## ![ScreenShots of behavior tree]()
 
 
 ## Documentation :
@@ -105,7 +106,8 @@ Change Tag of **Player** with "**Player**".
 12. If you don't see the npcs then you need to add 'NPC' layer into the culling mask section of FPSCamera which have attached to theplayer prefab
 
 ## Zombie sensor sense *Character* Layer for this NPCSensoryMemory.cs Script.
-![ScreenShots of behavior tree](ScreenShots/set_sensor_layer.png)
+<img src="ScreenShots/set_sensor_layer.png" alt="Changing Target Layer" width="300" height="300">
+
 
 * This Project has a Demo Scene with necessary setup.
 ## License:
