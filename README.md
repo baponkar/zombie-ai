@@ -5,7 +5,7 @@
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
 [![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
-[![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](Assets/__baponkar__/Tutorials.pdf)
+[![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf)
 <a href="https://baponkar.github.io/zombie-ai">
  <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
 </a>
