@@ -62,6 +62,7 @@ It has roughly following Characteristics:
 
 
 ## Documentation :
+* You can see scene setup tutorial on [![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf) or included PDF file.
 * This is a complete Unity Project with included depending assets and also included a Demo Scene.
 
 * If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence in the project then you need to add  corresponding layers and set by the below instruction.
