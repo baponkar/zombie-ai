@@ -40,13 +40,20 @@ It has roughly following Characteristics:
 - [x] Walking Audio 
 - [x] Camera Shake
 
-## ![ScreenShots0](ScreenShots/screenshot_with_weapon.png)
-## ![ScreenShots1](ScreenShots/Screenshot1.png)
-## ![ScreenShots1](ScreenShots/screenshot_with_multiple_zombie.png)
+<img src="ScreenShots/screenshot_with_weapon.png" alt="Screenshot 0" width="600" height="600">
+
+<img src="ScreenShots/Screenshot1.png" alt="Screenshot 1" width="600" height="600">
+
+<img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Screenshot 2" width="600" height="600">
+
+
 
 ## Behavior Tree
-## ![ScreenShots of behavior tree](ScreenShots/behavior_tree.png)
-## ![ScreenShots of behavior tree](ScreenShots/flowchart.png)
+<img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="600" height="600">
+
+<img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="600" height="600">
+## ![ScreenShots of behavior tree]()
+## ![ScreenShots of behavior tree]()
 
 
 ## Documentation :
@@ -131,7 +138,12 @@ I am using Audio files for footstep sound.
 ## Unity Version
 Unity 2020.3.15f2 or higher version.
 
-## Contact
-![Twitter](https://img.shields.io/twitter/follow/kar_bapon?style=social)
-![Github](https://img.shields.io/github/followers/baponkar?style=social)
-💌 baponkar@gmail.com
+## Contact:
+![Gmail](https://img.shields.io/badge/Gmail-baponkar%40gmail.com-red?logo=gmail)
+[![X](https://img.shields.io/badge/X-%40baponkar-maker?logo=x&logoColor=black&labelColor=red&color=black
+)](https://x.com/kar_bapon)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?logo=linkedin&logoColor=white)](https://in.linkedin.com/in/bapon-kar-815098200)
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@gamingjam8394?si=cElodqeKqe5PgX_o)
+
+----
+Copyright © [baponkar](https://github.com/baponkar) 2024
