@@ -4,8 +4,7 @@
 [![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/issues)
 [![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/forks)
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
-[![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
-[![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf)
+[![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)![Wiki Badge](https://img.shields.io/badge/%F0%9F%93%96%20wiki-maker?style=flat-square&logo=pdf&labelColor=blue&color=blue&cacheSeconds=https%3A%2F%2Fgithub.com%2Fbaponkar%2Fzombie-ai%2Fblob%2Fmain%2FAssets%2F__baponkar__%2FTutorials.pdf)
 <a href="https://baponkar.github.io/zombie-ai">
  <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
 </a>
