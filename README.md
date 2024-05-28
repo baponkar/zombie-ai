@@ -13,7 +13,7 @@
 
 # Zombie NPC or Zombie AI for Unity Game Engine
 
-* A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
+* A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character(NPC) or AI for Unity Project with a Demo Scene.You can use this asset for your Game development.You can use the given states or introduced your own new state then you need to import the corresponding state animation and state transition logic. You also can use the zombie prefab for any kind mesh character by importing corresponding mesh and animation.
 
 
 See following demo videos :
@@ -142,7 +142,7 @@ Find **"NPCSensoryMemory.cs"** Script inside Scripts folder.
 * [GNU GPL v-3.0 License](LICENSE.md)
 But you are requested to see the delendency assets licences.
 
-## Credits :
+## Credits 😊:
 1. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
    [1](https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s)
    [2](https://www.youtube.com/watch?v=1H9jrKyWKs0)
@@ -152,6 +152,8 @@ But you are requested to see the delendency assets licences.
 4. [Unity Learn - BehaviorTree](https://learn.unity.com/tutorial/introducing-behaviour-trees?uv=2020.2&projectId=60645258edbc2a001f5585aa)   
    
 5. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
+
+6. [Mixamo Character](https://www.mixamo.com)
 
 ## Dependency
 1. This Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232).
