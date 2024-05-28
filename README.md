@@ -56,7 +56,7 @@ Roughly It has following Characteristics:
 <a href="https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing">
 <img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="300" height="auto">
 </a>
-You can make your own custom transition then you need to update the files according to your logic.
+You can make your own custom transition then you need to update the state csharp script files according to your logic.
 
 ## Behavior Tree:
 I have dropped this feature.
