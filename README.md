@@ -18,14 +18,14 @@
 
 
 See 
-* [![Static Badge](https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
+* [![YouTube demo Badge](https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
 ](https://www.youtube.com/watch?v=JxbXT3MU_9M)
 
-* [![Static Badge](https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
+* [![YouTube demo Badge](https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
 ](https://www.youtube.com/watch?v=486w7NuyBWo)
 
-* [![Static Badge](https://img.shields.io/badge/download-v2.3.2-maker?style=flat-square&logoColor=red&color=red)
-](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.3)
+* ![Download Badge](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20download%20-latest-maker?style=flat-square&labelColor=red&color=blue&cacheSeconds=https%3A%2F%2Fgithub.com%2Fbaponkar%2Fzombie-ai%2Freleases%2Ftag%2Fv2.3.3)
+
 
 It has roughly following Characteristics:
 
