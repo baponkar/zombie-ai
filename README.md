@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/Unity-2020-maker?logo=unity)
+![Unity Badge](https://img.shields.io/badge/Unity-2020-maker?logo=unity)
 ![FPS](https://img.shields.io/badge/FPS-for%20Unity-blue)
 ![CSharp Badge](https://img.shields.io/badge/C%23-maker?logo=csharp)
 [![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/issues)
@@ -9,14 +9,14 @@
  <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
 </a>
 
- <img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" width="300" height="auto">
+<img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" width="300" height="auto">
 
 # Zombie NPC or Zombie AI for Unity Game Engine
 
 * A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
 
 
-See 
+See following demo videos :
 * [![YouTube demo Badge](https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
 ](https://www.youtube.com/watch?v=JxbXT3MU_9M)
 
@@ -26,7 +26,7 @@ See
 * ![Download Badge](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20download%20-latest-maker?style=flat-square&labelColor=red&color=blue&cacheSeconds=https%3A%2F%2Fgithub.com%2Fbaponkar%2Fzombie-ai%2Freleases%2Ftag%2Fv2.3.3)
 
 
-It has roughly following Characteristics:
+Roughly It has following Characteristics:
 
 - [x] Zombie - Idle State.
 - [x] Zombie - Chasing Player  State
@@ -46,6 +46,8 @@ It has roughly following Characteristics:
 - [x] Walking Audio 
 - [x] Camera Shake
 
+## Screenshots:
+
 <img src="ScreenShots/screenshot_with_weapon.png" alt="Screenshot 0" width="150" height="150"><img src="ScreenShots/Screenshot1.png" alt="Screenshot 1" width="150" height="150"><img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Screenshot 2" width="150" height="150"><img src="ScreenShots/screenshot_4.png" alt="Screenshot 2" width="150" height="150">
 
 
@@ -54,14 +56,17 @@ It has roughly following Characteristics:
 <a href="https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing">
 <img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="300" height="auto">
 </a>
+You can make your own custom transition then you need to update the files according to your logic.
 
-## Behavior Tree
+## Behavior Tree:
+I have dropped this feature.
 <img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto">
 
 
 
 ## Documentation :
 * You can see scene setup tutorial on [![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf) or included PDF file.
+
 * This is a complete Unity Project with included depending assets and also included a Demo Scene.
 
 * If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence in the project then you need to add  corresponding layers and set by the below instruction.
