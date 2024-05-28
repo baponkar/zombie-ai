@@ -1,10 +1,12 @@
-![Unity 2020 Badge](https://img.shields.io/badge/Unity-2020-blue)
+![Static Badge](https://img.shields.io/badge/Unity-2020-maker?logo=unity)
 ![FPS](https://img.shields.io/badge/FPS-for%20Unity-blue)
 ![C#](https://img.shields.io/badge/C-%23-lightgrey)
 ![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)
 ![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
 [![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
+[![Share Icon](https://example.com/share-icon.png)](https://example.com/share)
+
 
 
 
