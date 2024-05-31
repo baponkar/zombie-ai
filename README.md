@@ -53,9 +53,11 @@ Roughly It has following Characteristics:
 
 
 ## [Flowchart of State Transition](https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing)
+
 <a href="https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing">
 <img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="300" height="auto">
 </a>
+
 You can make your own custom transition then you need to update the state csharp script files according to your logic.
 
 ## Behavior Tree:
@@ -65,6 +67,7 @@ I have dropped this feature.
 
 
 ## Documentation :
+
 * You can see scene setup tutorial on [![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf) or included PDF file.
 
 * This is a complete Unity Project with included depending assets and also included a Demo Scene.
