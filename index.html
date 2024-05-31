@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Zombie Ai for unity</title>
+		<link href="css/style.css" rel="stylesheet">
+      <link href="favicon.ico" rel="icon" type="image/icon">
+
+		<!--Google Fonts-->
+		<!--Roboto Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<!--Dancing Font-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+		 <!-- Include Anime.js via CDN -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	</head>
+
+   <body>
+
+      <div class="banner">
+         <h1 class="typewritter">
+            <span class="text-wrapper">
+            <span class="letters">Zombie NPC or Zombie AI for Unity Game Engine</span>
+            <span class="line"></span>
+            </span>
+         </h1>
+      </div>
+
+      <div class="page-container">
+        
+      <p><img src="https://img.shields.io/badge/Unity-2020-maker?logo=unity" alt="Unity Badge">
+      <img src="https://img.shields.io/badge/FPS-for%20Unity-blue" alt="FPS">
+      <img src="https://img.shields.io/badge/C%23-maker?logo=csharp" alt="CSharp Badge">
+      <a href="https://github.com/baponkar/zombie-ai/issues"><img src="https://img.shields.io/github/issues/baponkar/zombie-ai" alt="Issue"></a>
+      <a href="https://github.com/baponkar/zombie-ai/forks"><img src="https://img.shields.io/github/forks/baponkar/zombie-ai" alt="fork"></a>
+      <a href="https://github.com/baponkar/zombie-ai/stargazers"><img src="https://img.shields.io/github/stars/baponkar/zombie-ai" alt="star"></a>
+      <a href="https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/baponkar/zombie-ai" alt="License"></a><a href="https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf"><img src="https://img.shields.io/badge/%F0%9F%93%96%20wiki-maker?style=flat-square&amp;logo=pdf&amp;labelColor=blue&amp;color=blue" alt="Wiki Badge"></a>
+      <a href="https://baponkar.github.io/zombie-ai">
+      <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
+      <a href="https://github.com/baponkar/zombie-ai?tab=readme-ov-file"><img src="https://img.shields.io/badge/Fork-me-maker?logo=github&logoColor=black&color=white&cacheSeconds=green" alt="fork me badge"></a>
+      
+      </a></p>
+      <p><img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" width="300" height="auto"></p>
+      
+      <ul>
+      <li>A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character(NPC) or AI for Unity Project with a Demo Scene.You can use this asset for your Game development.You can use the given states or introduced your own new state then you need to import the corresponding state animation and state transition logic. You also can use the zombie prefab for any kind mesh character by importing corresponding mesh and animation.</li>
+      </ul>
+      <p>See following demo videos :</p>
+      <ul>
+      <li><p><a href="https://www.youtube.com/watch?v=JxbXT3MU_9M"><img src="https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&amp;logo=YouTube&amp;logoColor=red&amp;color=red" alt="YouTube demo Badge">
+      </a></p>
+      </li>
+      <li><p><a href="https://www.youtube.com/watch?v=486w7NuyBWo"><img src="https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&amp;logo=YouTube&amp;logoColor=red&amp;color=red" alt="YouTube demo Badge">
+      </a></p>
+      </li>
+      <li><p><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20download%20-latest-maker?style=flat-square&amp;labelColor=red&amp;color=blue&amp;cacheSeconds=https%3A%2F%2Fgithub.com%2Fbaponkar%2Fzombie-ai%2Freleases%2Ftag%2Fv2.3.3" alt="Download Badge"></p>
+      </li>
+      </ul>
+      <p>Roughly It has following Characteristics:</p>
+      <ul>
+      <li>[x] Zombie - Idle State.</li>
+      <li>[x] Zombie - Chasing Player  State</li>
+      <li>[x] Zombie - Patrolling State</li>
+      <li>[x] Zombie - Attack State</li>
+      <li>[x] Zombie - Flee State</li>
+      <li>[x] Zombie  - Dead State</li>
+      <li>[x] Zombie State - Waypoint based Patrolling. </li>
+      <li>[x] Zombie - Call Near NPC to attack Player</li>
+      <li>[ ] ~State Control by Behavior Tree~</li>
+      <li>[x] Statemachine[Both prefab have]</li>
+      <li>[x] Zombie - Sound Sensor</li>
+      <li>[x] Zombie - Vison Sensor</li>
+      <li>[x] Sensor Memory for Target</li>
+      <li>[x] FPS Player</li>
+      <li>[x] A Demo Scene</li>
+      <li>[x] Walking Audio </li>
+      <li>[x] Camera Shake</li>
+      </ul>
+
+
+      <h2 id="screenshots-">Screenshots:</h2>
+      <div id="imageContainer">
+         <img src="ScreenShots/screenshot_with_weapon.png" alt="Image 1">
+         <img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 2" style="opacity: 0;">
+         <img src="ScreenShots/screenshot_with_weapon.png" alt="Image 3"  style="opacity: 0;">
+         <img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 4" style="opacity: 0;">
+     </div>
+
+
+
+      
+     
+      <p>You can make your own custom transition then you need to update the state csharp script files according to your logic.</p>
+      <h2 id="behavior-tree-">Behavior Tree:</h2>
+      <p>I have dropped this feature.</p>
+      <img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto"></p>
+      <h2 id="documentation-">Documentation :</h2>
+      <ul>
+      <li><p>You can see scene setup tutorial on <a href="https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf"><img src="https://img.shields.io/badge/Wiki-maker?logo=wiki" alt="Wiki Badge"></a> or included PDF file.</p>
+
+      </li>
+
+
+   
+
+
+
+      <li><p>This is a complete Unity Project with included depending assets and also included a Demo Scene.</p>
+      </li>
+      <li><p>If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence in the project then you need to add  corresponding layers and set by the below instruction.</p>
+      </li>
+      </ul>
+      <ul>
+      <li><p>If you use this project with your old project then first put &#39;_Zombie_ai_Fsm&#39; folder in your project then create and add the layers in your project by below instruction.
+      Zombie NPC is a navmesh agent which detect player by using vision sensor and sound sensor.Vison Sensor have a sensory memory to memorize sense which can be set by config scriptable object.</p>
+      </li>
+      <li><p>vison sensor can sense <strong>Character</strong> layers which is attached to the player prefab.</p>
+      </li>
+      <li><p>The NPC Zombie have different inter related states you can manage those states by set up in config scriptable object found in the project.</p>
+      </li>
+      <li><p>Project setup instructions:</p>
+      </li>
+      </ul>
+      <hr>
+      <ol>
+      <li><p>Add following layers in the following orders </p>
+      </li>
+      <li><p>[x] Layer 3 - <strong>Player</strong></p>
+      </li>
+      <li>[x] Layer 6 - <strong>NPC</strong></li>
+      <li>[x] Layer 13 - <strong>Character</strong></li>
+      <li><p>[x] Layer 14 - <strong>Mini Map</strong></p>
+      </li>
+      <li><p>NPC  : Change Default layer of  Zombie/Romero Prefab into <strong>NPC</strong>, and also
+      Change Tag  of  Zombie/Romero Prefab into <strong>NPC</strong>.</p>
+      </li>
+      <li><p>Change Layer of <strong>Player</strong> into <strong>Character</strong> which will be seen by NPCs, and also
+      Change Tag of <strong>Player</strong> with &quot;<strong>Player</strong>&quot;.</p>
+      </li>
+      <li><p>Change Layer of all prefabs <strong>indicator plane</strong> into &quot;<strong>Mini Map</strong>&quot; Layer.Which will be seen only by Mini Map Camera.</p>
+      </li>
+      <li><p>See <strong>NPCVisionSensor</strong> Script which attached with npcs i.e. zombie/Romero prefabs and change its <strong>Occulation Layer</strong> with corresponding
+      <strong>Ground Layer</strong> i.e. if ground plain be <strong>Defult</strong> then change into <strong>Defult</strong> Layer.</p>
+      </li>
+      <li><p>See NPCVisionSensor.cs Script which attached with npcs i.e. zombie/Romero prefabs and change its <strong>Target Layer</strong> into <strong>Character</strong> Layer which is the Layer of Player.So NPCs can see the player by vision sensor.</p>
+      </li>
+      </ol>
+      <ol>
+      <li><p>Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).</p>
+      </li>
+      <li><p>Now put zombie prefab and player prefab in your scene.Player has attached a Health script which is damageable by Zombie/Romero.</p>
+      </li>
+      <li><p>Zombie also has attached a Health Script which can be damagable by external player which has a weapon which can be used to damage zombies health.</p>
+      </li>
+      <li><p>Change or tweak zombie behavior by setting up zombie config scriptable object.</p>
+      </li>
+      <li><p>To Change custom sensor detection layer edit &#39;NPCSensoryMemory.cs&#39; file</p>
+      </li>
+      <li><p>If you don&#39;t see the npcs then you need to add &#39;NPC&#39; layer into the culling mask section of FPSCamera which have attached to theplayer prefab</p>
+      </li>
+      </ol>
+      <h2 id="zombie-sensor-sense-character-layer-for-this-npcsensorymemory-cs-script-">Zombie sensor sense <em>Character</em> Layer for this NPCSensoryMemory.cs Script.</h2>
+      <p>Find <strong>&quot;NPCSensoryMemory.cs&quot;</strong> Script inside Scripts folder.</p>
+      <ul>
+      <li>Zombie_Ai<ul>
+      <li>Assets<ul>
+      <li>Zombie_ai<ul>
+      <li>Zombie_NPC<ul>
+      <li>Scripts<ul>
+      <li>NPCSensoryMemory.cs</li>
+      </ul>
+      </li>
+      </ul>
+      </li>
+      </ul>
+      </li>
+      </ul>
+      </li>
+      </ul>
+      </li>
+      </ul>
+
+
+      <div class="codebox">
+         <header>
+           <span></span>
+           <span></span>
+           <span></span>
+         </header>
+   
+         <!---->
+         <pre>
+           <code >
+             <!---->
+            {
+               int targets = sensor.Filter(characters, 'TargetLayer');
+               //Here put the player layer name in 'TargetLayer'
+               //Here I have use 'Character' as Player Object Layer is that.
+               void UpdateSenses(NPCVisionSensor sensor)
+            
+               ....
+            }
+             <!---->
+           </code>
+         </pre>
+       </div>
+
+
+     
+      <p><img src="ScreenShots/set_sensor_layer.png" alt="Changing Target Layer" width="300" height="300"></p>
+      <ul>
+      <li>This Project has a Demo Scene with necessary setup.<h2 id="license-">License:</h2>
+      </li>
+      <li><a href="LICENSE.md">GNU GPL v-3.0 License</a>
+      But you are requested to see the delendency assets licences.</li>
+      </ul>
+      <h2 id="credits-">Credits 😊:</h2>
+      <ol>
+      <li><p>I have get ideas from  Youtuber &#39;Kiwi Coder&#39;s  tutorials
+      <a href="https://www.youtube.com/watch?v=znZXmmyBF-o&amp;t=629s">1</a>
+      <a href="https://www.youtube.com/watch?v=1H9jrKyWKs0">2</a></p>
+      </li>
+      <li><p>I have get ideas from  Youtuber <a href="https://www.youtube.com/watch?v=UjkSFoLxesw&amp;t=7s">&#39;Dev/GameDevelopment&#39;</a>s  tutorials</p>
+      </li>
+      <li><p><a href="https://learn.unity.com/tutorial/introducing-behaviour-trees?uv=2020.2&amp;projectId=60645258edbc2a001f5585aa">Unity Learn - BehaviorTree</a>   </p>
+      </li>
+      <li><p>Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a></p>
+      </li>
+      <li><p><a href="https://www.mixamo.com">Mixamo Character</a></p>
+      </li>
+      </ol>
+      <h2 id="dependency">Dependency</h2>
+      <ol>
+      <li>This Assets depend on <a href="https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232">&#39;Zombie assets by Pxltiger&#39;</a>.
+      So You need to download this package from Unity assets store along with this Zombie_Enemy_AI assets.</li>
+      <li><a href="https://github.com/Unity-Technologies/Standard-Assets-Characters">Standard-Assets-Characters</a>
+      I am using Audio files for footstep sound.</li>
+      <li><a href="https://assetstore.unity.com/packages/3d/props/guns/rifle-25668">Rifle by Game-Ready Studios</a></li>
+      <li><a href="https://github.com/baponkar/Unity-Simple-FPS">Unity Simple FPS</a> by me.</li>
+      <li><a href="https://github.com/baponkar/My-Behavior-Tree">My Behavior Tree</a> by me.</li>
+      <li><a href="https://github.com/baponkar/Traffic-System-in-Unity">Traffic-System</a> by me.</li>
+      <li><p><a href="https://thekiwicoder.com/behaviour-tree-editor/">Kiwi coder Behavior Tree</a> by Kiwi Coder.</p>
+      </li>
+      <li><p>I have put all the above packages file and folder inside of this project.</p>
+      <h2 id="unity-version">Unity Version</h2>
+      <p>Unity 2020.3.15f2 or higher version.</p>
+      </li>
+      </ol>
+      <h2 id="contact-">Contact:</h2>
+      <p><img src="https://img.shields.io/badge/Gmail-baponkar%40gmail.com-red?logo=gmail" alt="Gmail">
+      <a href="https://x.com/kar_bapon"><img src="https://img.shields.io/badge/X-%40baponkar-maker?logo=x&amp;logoColor=black&amp;labelColor=red&amp;color=black" alt="X"></a>
+      <a href="https://in.linkedin.com/in/bapon-kar-815098200"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
+      <a href="https://youtube.com/@gamingjam8394?si=cElodqeKqe5PgX_o"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&amp;logoColor=white" alt="YouTube"></a></p>
+      <hr>
+      <p>Copyright © <a href="https://github.com/baponkar">baponkar</a> 2024</p>
+   </div>
+
+   <script src="js/typewriting_anim.js"></script>
+   <script src="js/pdf_control.js"></script>
+   <script src="js/image_transition.js"></script>
+   </body>
+</html>

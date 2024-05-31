@@ -1,0 +1,247 @@
+/*Custom Colors*/
+
+:root {
+    --primary-color: #84ADF7;
+    --secondary-color: #4B8AE5;
+    --accent-color: #08559B;
+
+    --black-background-color: #001B26;
+	--blue-background-color: #00324D;
+
+    --blue-text-color: #F2F5FF;
+	--white-text-color: #F2F5FF;
+}
+
+
+
+body{
+	font-family: "Roboto", sans-serif;
+	background-color: var(--black-background-color);
+}
+
+.page-container{
+	max-width: 90%;
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	background-color: var(--blue-background-color);
+	border-radius: 5px;
+	border: 2px solid --secondary-color;
+	border-color: var(--accent-color);
+	box-sizing: border-box;
+	box-shadow: 10px 10px 10px var(--secondary-color);
+}
+
+.banner{
+	max-width: 90%;
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	background-color: var(--blue-background-color);
+	box-shadow: 10px 10px 10px var(--secondary-color);
+}
+
+
+h1{
+	font-family: "Roboto",sans-serif;
+	color: var(--white-text-color);
+}
+
+h1.dancing{
+	font-family: "Dancing Script",sans-serif;
+	color: var(--white-text-color);
+	text-align: center;
+}
+
+h2{
+	font-family: "Roboto",sans-serif;
+	color: var(--white-text-color);
+}
+
+h2.dancing{
+	font-family: "Dancing Script",sans-serif;
+	color: var(--white-text-color);
+	text-align: center;
+}
+
+a{
+	font-family: "Roboto",sans-serif;
+	color: var(--blue-text-color)
+}
+
+
+
+
+p{
+	font-family: "Roboto",sans-serif;
+	color: var(--white-text-color)
+}
+
+p.dancing{
+	font-family: "Dancing Script",sans-serif;
+	color: var(--white-text-color);
+}
+
+li{
+	font-family: "Roboto",sans-serif;
+	color: var(--blue-text-color)
+}
+
+object {
+	width: 100%;
+	 height: 400px;
+}
+
+#imageContainer {
+	position: relative;
+	width: 0600px;
+	height: 300px;
+	overflow: hidden;
+}
+#imageContainer img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: opacity 1s ease-in-out;
+	z-index: 0; /* Ensure images are stacked on top of each other */
+}
+
+.fade-in {
+	animation: fadeIn 1s ease-in-out forwards;
+}
+.fade-out {
+	animation: fadeOut 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+.tearoff {
+	animation: tearoff 1s ease-in-out forwards;
+}
+@keyframes tearoff {
+	0% { transform: translateX(0); }
+	50% { transform: translateX(-100%); opacity: 0.5; }
+	100% { transform: translateX(-100%); opacity: 0; }
+}
+
+.codebox {
+    background-color: #444444f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(191, 189, 189, 0.771);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 5%;
+}
+
+
+.codebox header {
+    text-align: right;
+    padding: 12px 0px;
+    background-color: #1d1c1c;
+    border-radius: 12px 0px 0 0;
+    line-height: 0;
+}
+
+.codebox header span {
+    height: 16px;
+    width: 16px;
+    margin-right: 2%;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.codebox header span:nth-child(1) {
+    background-color: #ff5c5c;
+}
+
+.codebox header span:nth-child(2) {
+    background-color: #ffbd4c;
+}
+
+.codebox header span:nth-child(3) {
+    background-color: #00ca56;
+}
+
+.codebox code {
+    display: block;
+    overflow-x: auto;
+	color: var(--white-text-color);
+}
+
+.codebox code pre {
+    margin: 0%;
+}
+
+.keyword {
+    color: blue;
+}
+
+.function {
+    color: #880000;
+}
+
+.string {
+    color: green;
+}
+
+
+.typewritter {
+	font-family: "Roboto Script",sans-serif;
+	font-weight: 200;
+	font-size: 2em;
+	text-align: center;
+  }
+  
+  .typewritter .text-wrapper {
+	position: relative;
+	display: inline-block;
+	padding-top: 0.1em;
+	padding-right: 0.05em;
+	padding-bottom: 0.15em;
+  }
+  
+  .typewritter .line {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	transform-origin: 100% 100%;
+	bottom: 0;
+  }
+  
+  .typewritter .letter {
+	padding-top: 2%;
+	display: inline-block;
+	line-height: 1em;
+	text-align: center;
+  }
+
+
+  /* Add media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .page-container, .banner {
+        width: 90%;
+        margin: 2% auto;
+    }
+
+    #imageContainer {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
