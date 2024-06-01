@@ -4,7 +4,7 @@
 	<head>
 		<title>Zombie Ai for unity</title>
 		<link href="css/style.css" rel="stylesheet">
-      <link href="favicon.ico" rel="icon" type="image/icon">
+        <link href="favicon.ico" rel="icon" type="image/icon">
 
 		<!--Google Fonts-->
 		<!--Roboto Font-->
@@ -18,6 +18,17 @@
 
 		 <!-- Include Anime.js via CDN -->
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+         <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_TRACKING_ID"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_GA_TRACKING_ID');
+        </script>
+        <!-- End Google Analytics -->
 	</head>
 
    <body>
@@ -29,6 +40,11 @@
             <span class="line"></span>
             </span>
          </h1>
+
+         <div class="image-container">
+            <img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" >
+         </div>
+      
       </div>
 
       <div class="page-container">
@@ -45,7 +61,11 @@
       <a href="https://github.com/baponkar/zombie-ai?tab=readme-ov-file"><img src="https://img.shields.io/badge/Fork-me-maker?logo=github&logoColor=black&color=white&cacheSeconds=green" alt="fork me badge"></a>
       
       </a></p>
-      <p><img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" width="300" height="auto"></p>
+      
+     
+
+      
+   
       
       <ul>
       <li>A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character(NPC) or AI for Unity Project with a Demo Scene.You can use this asset for your Game development.You can use the given states or introduced your own new state then you need to import the corresponding state animation and state transition logic. You also can use the zombie prefab for any kind mesh character by importing corresponding mesh and animation.</li>
@@ -62,37 +82,94 @@
       </li>
       </ul>
       <p>Roughly It has following Characteristics:</p>
+      
       <ul>
-      <li>[x] Zombie - Idle State.</li>
-      <li>[x] Zombie - Chasing Player  State</li>
-      <li>[x] Zombie - Patrolling State</li>
-      <li>[x] Zombie - Attack State</li>
-      <li>[x] Zombie - Flee State</li>
-      <li>[x] Zombie  - Dead State</li>
-      <li>[x] Zombie State - Waypoint based Patrolling. </li>
-      <li>[x] Zombie - Call Near NPC to attack Player</li>
-      <li>[ ] ~State Control by Behavior Tree~</li>
-      <li>[x] Statemachine[Both prefab have]</li>
-      <li>[x] Zombie - Sound Sensor</li>
-      <li>[x] Zombie - Vison Sensor</li>
-      <li>[x] Sensor Memory for Target</li>
-      <li>[x] FPS Player</li>
-      <li>[x] A Demo Scene</li>
-      <li>[x] Walking Audio </li>
-      <li>[x] Camera Shake</li>
-      </ul>
+         <li>
+             <input type="checkbox" id="task1" name="task1" checked>
+             <label for="task1">Zombie - Idle State</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task2" name="task2" checked>
+             <label for="task2">Zombie - Chasing Player State</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task3" name="task3" checked>
+             <label for="task3">Zombie - Patrolling State</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task4" name="task4" checked>
+             <label for="task4">Zombie - Attack State</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task5" name="task5" checked>
+             <label for="task5">Zombie - Flee State</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task6" name="task6" checked>
+             <label for="task6">Zombie - Dead State</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task7" name="task7" checked>
+             <label for="task7">Zombie State - Waypoint based Patrolling</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task8" name="task8" checked>
+             <label for="task8">Zombie - Call Near NPC to attack Player</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task9" name="task9">
+             <label for="task9"><s>State Control by Behavior Tree</s></label>
+         </li>
+         <li>
+             <input type="checkbox" id="task10" name="task10" checked>
+             <label for="task10">Statemachine [Both prefabs have]</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task11" name="task11" checked>
+             <label for="task11">Zombie - Sound Sensor</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task12" name="task12" checked>
+             <label for="task12">Zombie - Vision Sensor</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task13" name="task13" checked>
+             <label for="task13">Sensor Memory for Target</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task14" name="task14" checked>
+             <label for="task14">FPS Player</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task15" name="task15" checked>
+             <label for="task15">A Demo Scene</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task16" name="task16" checked>
+             <label for="task16">Walking Audio</label>
+         </li>
+         <li>
+             <input type="checkbox" id="task17" name="task17" checked>
+             <label for="task17">Camera Shake</label>
+         </li>
+     </ul>
 
 
       <h2 id="screenshots-">Screenshots:</h2>
-      <div id="imageContainer">
-         <img src="ScreenShots/screenshot_with_weapon.png" alt="Image 1">
-         <img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 2" style="opacity: 0;">
-         <img src="ScreenShots/screenshot_with_weapon.png" alt="Image 3"  style="opacity: 0;">
-         <img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 4" style="opacity: 0;">
+      <div class="imageContainer" id="imageContainer">
+         <img id="image1" src="ScreenShots/screenshot_with_weapon.png" alt="Image 1">
+         <img id="image2" src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 2">
+         <img id="image3" src="ScreenShots/screenshot_with_weapon.png" alt="Image 3">
+         <img id="image4" src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 4">
      </div>
 
 
-
+     <div id="dotsContainer">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
       
      
       <p>You can make your own custom transition then you need to update the state csharp script files according to your logic.</p>
@@ -130,12 +207,22 @@
       <ol>
       <li><p>Add following layers in the following orders </p>
       </li>
-      <li><p>[x] Layer 3 - <strong>Player</strong></p>
-      </li>
-      <li>[x] Layer 6 - <strong>NPC</strong></li>
-      <li>[x] Layer 13 - <strong>Character</strong></li>
-      <li><p>[x] Layer 14 - <strong>Mini Map</strong></p>
-      </li>
+      <li>
+         <input type="checkbox" id="layer3" name="layer3" checked>
+         <label for="layer3">Layer 3 - <strong>Player</strong></label>
+     </li>
+     <li>
+         <input type="checkbox" id="layer6" name="layer6" checked>
+         <label for="layer6">Layer 6 - <strong>NPC</strong></label>
+     </li>
+     <li>
+         <input type="checkbox" id="layer13" name="layer13" checked>
+         <label for="layer13">Layer 13 - <strong>Character</strong></label>
+     </li>
+     <li>
+         <input type="checkbox" id="layer14" name="layer14" checked>
+         <label for="layer14">Layer 14 - <strong>Mini Map</strong></label>
+     </li>
       <li><p>NPC  : Change Default layer of  Zombie/Romero Prefab into <strong>NPC</strong>, and also
       Change Tag  of  Zombie/Romero Prefab into <strong>NPC</strong>.</p>
       </li>
@@ -174,16 +261,7 @@
       <li>Scripts<ul>
       <li>NPCSensoryMemory.cs</li>
       </ul>
-      </li>
-      </ul>
-      </li>
-      </ul>
-      </li>
-      </ul>
-      </li>
-      </ul>
-      </li>
-      </ul>
+      
 
 
       <div class="codebox">
@@ -262,6 +340,8 @@
 
    <script src="js/typewriting_anim.js"></script>
    <script src="js/pdf_control.js"></script>
-   <script src="js/image_transition.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+   <script src="js/slide_show.js"></script>
+
    </body>
 </html>

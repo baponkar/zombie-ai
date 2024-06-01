@@ -1,31 +1,32 @@
-![Static Badge](https://img.shields.io/badge/Unity-2020-maker?logo=unity)
+![Unity Badge](https://img.shields.io/badge/Unity-2020-maker?logo=unity)
 ![FPS](https://img.shields.io/badge/FPS-for%20Unity-blue)
-![C#](https://img.shields.io/badge/C-%23-lightgrey)
-![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)
-![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)
+![CSharp Badge](https://img.shields.io/badge/C%23-maker?logo=csharp)
+[![Issue](https://img.shields.io/github/issues/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/issues)
+[![fork](https://img.shields.io/github/forks/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/forks)
 [![star](https://img.shields.io/github/stars/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/stargazers)
-[![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)
-[![Share Icon](https://example.com/share-icon.png)](https://example.com/share)
+[![License](https://img.shields.io/github/license/baponkar/zombie-ai)](https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md)[![Wiki Badge](https://img.shields.io/badge/%F0%9F%93%96%20wiki-maker?style=flat-square&logo=pdf&labelColor=blue&color=blue)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf)
+<a href="https://baponkar.github.io/zombie-ai">
+ <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
+</a>
 
-
-
+<img src="ScreenShots/Social_pic.png" alt="Social Picture Banner" width="300" height="auto">
 
 # Zombie NPC or Zombie AI for Unity Game Engine
 
-* A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character or AI for Unity Project with a Demo Scene.
+* A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character(NPC) or AI for Unity Project with a Demo Scene.You can use this asset for your Game development.You can use the given states or introduced your own new state then you need to import the corresponding state animation and state transition logic. You also can use the zombie prefab for any kind mesh character by importing corresponding mesh and animation.
 
 
-See 
-* [![Static Badge](https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
+See following demo videos :
+* [![YouTube demo Badge](https://img.shields.io/badge/youtube%20demo-2.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
 ](https://www.youtube.com/watch?v=JxbXT3MU_9M)
 
-* [![Static Badge](https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
+* [![YouTube demo Badge](https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&logo=YouTube&logoColor=red&color=red)
 ](https://www.youtube.com/watch?v=486w7NuyBWo)
 
-* [![Static Badge](https://img.shields.io/badge/download-v2.3.2-maker?style=flat-square&logoColor=red&color=red)
-](https://github.com/baponkar/zombie-ai/releases/tag/v2.3.3)
+* ![Download Badge](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20download%20-latest-maker?style=flat-square&labelColor=red&color=blue&cacheSeconds=https%3A%2F%2Fgithub.com%2Fbaponkar%2Fzombie-ai%2Freleases%2Ftag%2Fv2.3.3)
 
-It has roughly following Characteristics:
+
+Roughly It has following Characteristics:
 
 - [x] Zombie - Idle State.
 - [x] Zombie - Chasing Player  State
@@ -45,21 +46,30 @@ It has roughly following Characteristics:
 - [x] Walking Audio 
 - [x] Camera Shake
 
+## Screenshots:
+
 <img src="ScreenShots/screenshot_with_weapon.png" alt="Screenshot 0" width="150" height="150"><img src="ScreenShots/Screenshot1.png" alt="Screenshot 1" width="150" height="150"><img src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Screenshot 2" width="150" height="150"><img src="ScreenShots/screenshot_4.png" alt="Screenshot 2" width="150" height="150">
 
 
 
 ## [Flowchart of State Transition](https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing)
+
 <a href="https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing">
 <img src="ScreenShots/flowchart.png" alt="Flowchart of State transition" width="300" height="auto">
 </a>
 
-## Behavior Tree
+You can make your own custom transition then you need to update the state csharp script files according to your logic.
+
+## Behavior Tree:
+I have dropped this feature.
 <img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto">
 
 
 
 ## Documentation :
+
+* You can see scene setup tutorial on [![Wiki Badge](https://img.shields.io/badge/Wiki-maker?logo=wiki)](https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf) or included PDF file.
+
 * This is a complete Unity Project with included depending assets and also included a Demo Scene.
 
 * If You download this project and  open it with Unity then it may works perfectly but sometimes may not works the way because of layers absence in the project then you need to add  corresponding layers and set by the below instruction.
@@ -135,7 +145,7 @@ Find **"NPCSensoryMemory.cs"** Script inside Scripts folder.
 * [GNU GPL v-3.0 License](LICENSE.md)
 But you are requested to see the delendency assets licences.
 
-## Credits :
+## Credits 😊:
 1. I have get ideas from  Youtuber 'Kiwi Coder's  tutorials
    [1](https://www.youtube.com/watch?v=znZXmmyBF-o&t=629s)
    [2](https://www.youtube.com/watch?v=1H9jrKyWKs0)
@@ -145,6 +155,8 @@ But you are requested to see the delendency assets licences.
 4. [Unity Learn - BehaviorTree](https://learn.unity.com/tutorial/introducing-behaviour-trees?uv=2020.2&projectId=60645258edbc2a001f5585aa)   
    
 5. Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6419">Pixabay</a>
+
+6. [Mixamo Character](https://www.mixamo.com)
 
 ## Dependency
 1. This Assets depend on ['Zombie assets by Pxltiger'](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232).
@@ -170,3 +182,5 @@ Unity 2020.3.15f2 or higher version.
 
 ----
 Copyright © [baponkar](https://github.com/baponkar) 2024
+
+
