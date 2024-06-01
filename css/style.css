@@ -295,7 +295,7 @@ object {
 		padding-right: 0.5%;
 		padding-bottom: 0.5%;
 		padding-top: 0.5%;
-		background-color: var(red);
+		background-color: var(rgb(168, 39, 39));
 		border-radius: 5px;
 		border: 2px solid --secondary-color;
 		border-color: var(--accent-color);
