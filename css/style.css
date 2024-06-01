@@ -349,25 +349,25 @@ li{
     .page-container {
         max-width: 98%;
 		height: auto;
-		margin-left: 0.5%;
-		margin-right: 0.5%;
-		margin-top: 0.5%;
-		padding-left: 0.5%;
-		padding-right: 0.5%;
-		padding-bottom: 0.5%;
-		padding-top: 0.5%;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-top: 1%;
+		padding-left: 1%;
+		padding-right: 1%;
+		padding-bottom: 1%;
+		padding-top: 1%;
 		box-shadow: 5px 5px 5px var(--secondary-color);
     }
 
 	.banner{
 		max-width: 98%;
 		height: auto;
-		margin-left: 0.5%;
-		margin-right: 0.5%;
+		margin-left: 1%;
+		margin-right: 1%;
 		margin-top: 1%;
-		padding-left: 0.5%;
-		padding-right: 0.5%;
-		padding-bottom: 0.5%;
+		padding-left: 1%;
+		padding-right: 1%;
+		padding-bottom: 1%;
 	}
 
     #imageContainer {
@@ -397,7 +397,7 @@ li{
     .page-container {
         max-width: 98%;
 		height: auto;
-		margin-left: 0.5%;
+		margin-left: .5%;
 		margin-right: 0.5%;
 		margin-top: 0.5%;
 		padding-left: 0.5%;
