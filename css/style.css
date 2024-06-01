@@ -287,7 +287,7 @@ object {
 @media screen and (max-width: 768px) {
     .page-container, .banner {
         width: 90%;
-        margin: 2% auto;
+        margin: 0.5% auto;
     }
 
     #imageContainer {
