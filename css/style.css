@@ -81,6 +81,16 @@ body{
     100% { clip-path: inset(0% 0% 0% 0%); }
 }
 
+@keyframes rollOut {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(-90deg); } /* Roll to 90 degrees to left */
+}
+
+@keyframes rollIn {
+    0% { transform: rotateY(-90deg); }
+    100% { transform: rotateY(0deg); } /* Roll back to original position */
+}
+
 
 h1{
 	font-family: "Roboto",sans-serif;
@@ -337,7 +347,7 @@ li{
 /* Add media query for Realme Narzo 30 Pro 1080  */
 @media screen and (max-width: 1080px) {
     .page-container {
-        max-width: 99%;
+        max-width: 98%;
 		height: auto;
 		margin-left: 0.5%;
 		margin-right: 0.5%;
@@ -350,7 +360,7 @@ li{
     }
 
 	.banner{
-		max-width: 99%;
+		max-width: 98%;
 		height: auto;
 		margin-left: 0.5%;
 		margin-right: 0.5%;
@@ -385,7 +395,7 @@ li{
 /* Add media query for responsiveness */
 @media screen and (max-width: 768px) {
     .page-container {
-        max-width: 99%;
+        max-width: 98%;
 		height: auto;
 		margin-left: 0.5%;
 		margin-right: 0.5%;
@@ -403,7 +413,7 @@ li{
     }
 
 	.banner{
-		max-width: 99%;
+		max-width: 98%;
 		height: auto;
 		margin-left: 0.5%;
 		margin-right: 0.5%;

@@ -1,19 +1,19 @@
 // JavaScript
 const image = document.getElementById('animatedImage');
 
-function startVanishAnimation() {
-    image.style.animation = 'vanish 2s forwards';
+function startRollOutAnimation() {
+    image.style.animation = 'rollOut 2s forwards';
 }
 
-function startReloadAnimation() {
-    image.style.animation = 'reload 2s forwards';
+function startRollInAnimation() {
+    image.style.animation = 'rollIn 2s forwards';
 }
 
 function startAnimationLoop() {
-    startVanishAnimation();
+    startRollOutAnimation();
     setTimeout(() => {
-        startReloadAnimation();
-    }, 2000); // Timing should match the vanish animation duration
+        startRollInAnimation();
+    }, 2000); // Timing should match the roll out animation duration
 }
 
-setInterval(startAnimationLoop, 4000); // Adjust interval timing based on the total duration of vanish and reload
+setInterval(startAnimationLoop, 4000); // Adjust interval timing based on the total duration of roll out and roll in
