@@ -283,17 +283,19 @@ object {
   
 
 
-  /* Add media query for responsiveness */
+/* Add media query for responsiveness */
 @media screen and (max-width: 768px) {
     .page-container, .banner {
         width: 90%;
-        margin: 0.5% auto;
+        margin: 10% auto;
     }
 
     #imageContainer {
         height: 200px; /* Adjust height for smaller screens */
     }
 }
+
+
 
 
 
