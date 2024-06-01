@@ -182,3 +182,28 @@ Unity 2020.3.15f2 or higher version.
 
 ----
 Copyright © [baponkar](https://github.com/baponkar) 2024
+
+
+
+# Project Directory
+
+- **src**
+  - **components**
+    - `Header.js`
+    - `Footer.js`
+  - **utils**
+    - `helpers.js`
+    - `api.js`
+  - `index.js`
+- **public**
+  - `index.html`
+  - `favicon.ico`
+- **assets**
+  - **images**
+    - `logo.png`
+    - `background.jpg`
+  - **styles**
+    - `main.css`
+    - `theme.css`
+- `package.json`
+- `README.md`
