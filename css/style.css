@@ -19,6 +19,10 @@ body{
 	background-color: var(--black-background-color);
 }
 
+.center {
+	justify-content: center;
+}
+
 .page-container{
 	max-width: 90%;
 	height: auto;
@@ -112,19 +116,23 @@ li{
 	color: var(--blue-text-color)
 }
 
-object {
-	width: 100%;
-	 height: 400px;
-}
 
 
-
+/* Screenshots Animated image container*/
 #imageContainer {
 	position: relative;
-	width: 600px;
-	height: 300px;
+	width: 445px;
+	height: 250px;
+	padding: 5%;
 	overflow: hidden;
+	display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Horizontally center the image */
+	border-color: #F2F5FF;
+	border-radius: 5px;
+	border: solid 2px white;
+	background-color: var(--secondary-color);
 }
+
 #imageContainer img {
 	position: absolute;
 	top: 0;
@@ -133,6 +141,7 @@ object {
 	height: 100%;
 	transition: opacity 1s ease-in-out;
 	z-index: 0; /* Ensure images are stacked on top of each other */
+	justify-content: center;
 }
 
 #image1 { left: 0%; }
@@ -183,13 +192,18 @@ object {
     background-color: #717171;
 }
 
-
+/* Terminal like codebox*/
 .codebox {
+	display: block;
+	/*align-self: flex-start;*/
     background-color: #444444f7;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(191, 189, 189, 0.771);
     font-family: 'Courier New', Courier, monospace;
-    margin: 5%;
+    margin-top: 5%;
+	margin-bottom: 5%;
+	align-self: flex-start;
+	border: solid 2px white;
 }
 
 
@@ -245,6 +259,7 @@ object {
 }
 
 
+
 .typewritter {
 	font-family: "Roboto Script",sans-serif;
 	font-weight: 200;
@@ -279,7 +294,8 @@ object {
   }
 
 
-/* Add media query for responsiveness */
+
+/* Add media query for Realme Narzo 30 Pro 1080  */
 @media screen and (max-width: 1080px) {
     .page-container {
         max-width: 99%;
@@ -291,17 +307,38 @@ object {
 		padding-right: 0.5%;
 		padding-bottom: 0.5%;
 		padding-top: 0.5%;
-		background-color: var(rgb(168, 39, 39));
-		border-radius: 5px;
-		border: 2px solid --secondary-color;
-		border-color: var(--accent-color);
-		box-sizing: border-box;
 		box-shadow: 5px 5px 5px var(--secondary-color);
     }
 
+	.banner{
+		max-width: 99%;
+		height: auto;
+		margin-left: 0.5%;
+		margin-right: 0.5%;
+		margin-top: 1%;
+		padding-left: 0.5%;
+		padding-right: 0.5%;
+		padding-bottom: 0.5%;
+	}
+
     #imageContainer {
-        height: 200px; /* Adjust height for smaller screens */
+		width: 356px;
+        height: 200px; 
     }
+
+	#dotsContainer{
+		padding: 4%;
+		text-align: center;
+	}
+	
+	
+	.dot {
+		height: 5px;
+		width: 5px;
+		
+		margin: 0 3px;
+		
+	}
 }
   
 
@@ -326,7 +363,21 @@ object {
 		box-shadow: 5px 5px 5px var(--secondary-color);
     }
 
+	.banner{
+		max-width: 99%;
+		height: auto;
+		margin-left: 0.5%;
+		margin-right: 0.5%;
+		margin-top: 1%;
+		padding-left: 0.5%;
+		padding-right: 0.5%;
+		padding-bottom: 0.5%;
+		background-color: var(--blue-background-color);
+		box-shadow: 10px 10px 10px var(--secondary-color);
+	}
+
     #imageContainer {
+		width: 356px;
         height: 200px; /* Adjust height for smaller screens */
     }
 }

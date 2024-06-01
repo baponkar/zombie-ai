@@ -156,7 +156,8 @@
 
 
       <h2 id="screenshots-">Screenshots:</h2>
-      <div class="imageContainer" id="imageContainer">
+
+      <div class="center" id="imageContainer">
          <img id="image1" src="ScreenShots/screenshot_with_weapon.png" alt="Image 1">
          <img id="image2" src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 2">
          <img id="image3" src="ScreenShots/screenshot_with_weapon.png" alt="Image 3">
@@ -173,9 +174,15 @@
       
      
       <p>You can make your own custom transition then you need to update the state csharp script files according to your logic.</p>
+      
       <h2 id="behavior-tree-">Behavior Tree:</h2>
       <p>I have dropped this feature.</p>
-      <img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto"></p>
+
+      <div class="center" id="imageContainer">
+        <img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto">
+      </div>
+      
+
       <h2 id="documentation-">Documentation :</h2>
       <ul>
       <li><p>You can see scene setup tutorial on <a href="https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf"><img src="https://img.shields.io/badge/Wiki-maker?logo=wiki" alt="Wiki Badge"></a> or included PDF file.</p>
@@ -264,29 +271,29 @@
       
 
 
-      <div class="codebox">
-         <header>
-           <span></span>
-           <span></span>
-           <span></span>
-         </header>
-   
-         <!---->
-         <pre>
-           <code >
-             <!---->
-            {
-               int targets = sensor.Filter(characters, 'TargetLayer');
-               //Here put the player layer name in 'TargetLayer'
-               //Here I have use 'Character' as Player Object Layer is that.
-               void UpdateSenses(NPCVisionSensor sensor)
-            
-               ....
-            }
-             <!---->
-           </code>
-         </pre>
-       </div>
+    <div class="codebox">
+        <header>
+        <span></span>
+        <span></span>
+        <span></span>
+        </header>
+
+        <!---->
+        <pre>
+        <code >
+            <!---->
+        {
+            int targets = sensor.Filter(characters, 'TargetLayer');
+            //Here put the player layer name in 'TargetLayer'
+            //Here I have use 'Character' as Player Object Layer is that.
+            void UpdateSenses(NPCVisionSensor sensor)
+        
+            ....
+        }
+            <!---->
+        </code>
+        </pre>
+    </div>
 
 
      
