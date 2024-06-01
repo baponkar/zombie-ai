@@ -285,9 +285,22 @@ object {
 
 /* Add media query for responsiveness */
 @media screen and (max-width: 768px) {
-    .page-container, .banner {
-        width: 90%;
-        margin: 10% auto;
+    .page-container {
+        max-width: 99%;
+		height: auto;
+		margin-left: 0.5%;
+		margin-right: 0.5%;
+		margin-top: 0.5%;
+		padding-left: 0.5%;
+		padding-right: 0.5%;
+		padding-bottom: 0.5%;
+		padding-top: 0.5%;
+		background-color: var(--blue-background-color);
+		border-radius: 5px;
+		border: 2px solid --secondary-color;
+		border-color: var(--accent-color);
+		box-sizing: border-box;
+		box-shadow: 5px 5px 5px var(--secondary-color);
     }
 
     #imageContainer {
