@@ -157,7 +157,7 @@
 
       <h2 id="screenshots-">Screenshots:</h2>
 
-      <div class="center" id="imageContainer">
+      <div class="center" id="anim-imageContainer">
          <img id="image1" src="ScreenShots/screenshot_with_weapon.png" alt="Image 1">
          <img id="image2" src="ScreenShots/screenshot_with_multiple_zombie.png" alt="Image 2">
          <img id="image3" src="ScreenShots/screenshot_with_weapon.png" alt="Image 3">
@@ -178,7 +178,7 @@
       <h2 id="behavior-tree-">Behavior Tree:</h2>
       <p>I have dropped this feature.</p>
 
-      <div class="center" id="imageContainer">
+      <div class="imageContainer">
         <img src="ScreenShots/behavior_tree.png" alt="Behavior Tree" width="300" height="auto">
       </div>
       
@@ -236,14 +236,17 @@
       <li><p>Change Layer of <strong>Player</strong> into <strong>Character</strong> which will be seen by NPCs, and also
       Change Tag of <strong>Player</strong> with &quot;<strong>Player</strong>&quot;.</p>
       </li>
+
       <li><p>Change Layer of all prefabs <strong>indicator plane</strong> into &quot;<strong>Mini Map</strong>&quot; Layer.Which will be seen only by Mini Map Camera.</p>
       </li>
       <li><p>See <strong>NPCVisionSensor</strong> Script which attached with npcs i.e. zombie/Romero prefabs and change its <strong>Occulation Layer</strong> with corresponding
       <strong>Ground Layer</strong> i.e. if ground plain be <strong>Defult</strong> then change into <strong>Defult</strong> Layer.</p>
       </li>
+
       <li><p>See NPCVisionSensor.cs Script which attached with npcs i.e. zombie/Romero prefabs and change its <strong>Target Layer</strong> into <strong>Character</strong> Layer which is the Layer of Player.So NPCs can see the player by vision sensor.</p>
       </li>
       </ol>
+
       <ol>
       <li><p>Bake Navmesh with Humanoid Agent which should be in NavMeshAgent(Which attached to the Zombie Prefab).</p>
       </li>
@@ -258,16 +261,14 @@
       <li><p>If you don&#39;t see the npcs then you need to add &#39;NPC&#39; layer into the culling mask section of FPSCamera which have attached to theplayer prefab</p>
       </li>
       </ol>
+
       <h2 id="zombie-sensor-sense-character-layer-for-this-npcsensorymemory-cs-script-">Zombie sensor sense <em>Character</em> Layer for this NPCSensoryMemory.cs Script.</h2>
       <p>Find <strong>&quot;NPCSensoryMemory.cs&quot;</strong> Script inside Scripts folder.</p>
-      <ul>
-      <li>Zombie_Ai<ul>
-      <li>Assets<ul>
-      <li>Zombie_ai<ul>
-      <li>Zombie_NPC<ul>
-      <li>Scripts<ul>
-      <li>NPCSensoryMemory.cs</li>
-      </ul>
+      
+
+      <p> 
+        <li>Zombie_Ai/Assets/Zombie_ai/Zombie_NPC/ Scripts/NPCSensoryMemory.cs</li>
+      </p>
       
 
 
@@ -295,12 +296,16 @@
         </pre>
     </div>
 
+    
+
 
      
-      <p><img src="ScreenShots/set_sensor_layer.png" alt="Changing Target Layer" width="300" height="300"></p>
-      <ul>
-      <li>This Project has a Demo Scene with necessary setup.<h2 id="license-">License:</h2>
-      </li>
+      <div class="imageContainer">
+        <img src="ScreenShots/set_sensor_layer.png" alt="Changing Target Layer">
+        </div>
+     
+      <li>This Project has a Demo Scene with necessary setup.<h2 id="license-">License:</h2></li>
+
       <li><a href="LICENSE.md">GNU GPL v-3.0 License</a>
       But you are requested to see the delendency assets licences.</li>
       </ul>
@@ -335,7 +340,7 @@
       <h2 id="unity-version">Unity Version</h2>
       <p>Unity 2020.3.15f2 or higher version.</p>
       </li>
-      </ol>
+      
       <h2 id="contact-">Contact:</h2>
       <p><img src="https://img.shields.io/badge/Gmail-baponkar%40gmail.com-red?logo=gmail" alt="Gmail">
       <a href="https://x.com/kar_bapon"><img src="https://img.shields.io/badge/X-%40baponkar-maker?logo=x&amp;logoColor=black&amp;labelColor=red&amp;color=black" alt="X"></a>

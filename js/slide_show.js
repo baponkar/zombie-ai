@@ -1,5 +1,5 @@
 let currentIndex = 0;
-const images = document.querySelectorAll('#imageContainer img');
+const images = document.querySelectorAll('#anim-imageContainer img');
 const dots = document.querySelectorAll('.dot');
 const totalImages = images.length;
 
