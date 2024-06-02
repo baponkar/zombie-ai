@@ -122,7 +122,29 @@ a{
 	font-family: "Roboto",sans-serif;
 	color: var(--blue-text-color)
 }
+a:link {
+	color: var(--white-text-color);
+	text-decoration-color: var(--blue-text-color);
+	text-decoration: underline;
+}
 
+/* Visited link */
+a:visited {
+color: purple;
+text-decoration: none;
+}
+
+/* Link when hovered over */
+a:hover {
+color: red;
+text-decoration: underline;
+}
+
+/* Link when active (being clicked) */
+a:active {
+color: green;
+text-decoration: underline;
+}
 
 
 
@@ -136,34 +158,32 @@ p.dancing{
 	color: var(--white-text-color);
 }
 
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
 li{
 	font-family: "Roboto",sans-serif;
 	color: var(--blue-text-color)
 }
 
-/* Unvisited link */
-a:link {
-	color: var(--white-text-color);
-	text-decoration-color: var(--blue-text-color);
-	text-decoration: underline;
+/* Center the loader */
+#loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
   }
-  
-  /* Visited link */
-  a:visited {
-	color: purple;
-	text-decoration: none;
-  }
-  
-  /* Link when hovered over */
-  a:hover {
-	color: red;
-	text-decoration: underline;
-  }
-  
-  /* Link when active (being clicked) */
-  a:active {
-	color: green;
-	text-decoration: underline;
+  /* Hide content while loading */
+  #content {
+	display: none;
   }
   
 
