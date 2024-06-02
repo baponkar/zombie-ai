@@ -35,6 +35,7 @@ body{
 	padding-bottom: 2%;
 	padding-top: 2%;
 	background-color: var(--blue-background-color);
+
 	border-radius: 5px;
 	border: 2px solid --secondary-color;
 	border-color: var(--accent-color);
@@ -53,6 +54,8 @@ body{
 	padding-bottom: 2%;
 	background-color: var(--blue-background-color);
 	box-shadow: 10px 10px 10px var(--secondary-color);
+	border: solid --secondary-color 1px ;
+	border-radius: 10px;
 }
 
 .banner .image-container{
@@ -69,6 +72,7 @@ body{
 	width: 100%;
 	height: 1260 / 640;
 	object-fit: cover; /* Ensures the image covers the area */
+	border-radius: 10px;
 }
 
 @keyframes vanish {
@@ -111,7 +115,7 @@ h2{
 h2.dancing{
 	font-family: "Dancing Script",sans-serif;
 	color: var(--white-text-color);
-	text-align: center;
+	text-align: left;
 }
 
 a{
@@ -136,6 +140,32 @@ li{
 	font-family: "Roboto",sans-serif;
 	color: var(--blue-text-color)
 }
+
+/* Unvisited link */
+a:link {
+	color: var(--white-text-color);
+	text-decoration-color: var(--blue-text-color);
+	text-decoration: underline;
+  }
+  
+  /* Visited link */
+  a:visited {
+	color: purple;
+	text-decoration: none;
+  }
+  
+  /* Link when hovered over */
+  a:hover {
+	color: red;
+	text-decoration: underline;
+  }
+  
+  /* Link when active (being clicked) */
+  a:active {
+	color: green;
+	text-decoration: underline;
+  }
+  
 
 /* normal  image container*/
 .imageContainer {
