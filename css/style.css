@@ -491,9 +491,20 @@ li{
 		padding-bottom: 1%;
 	}
 
+	.badge-container{
+		box-shadow: 5px 5px 5px var(--secondary-color);
+		border: solid 5px white;
+		border-radius: 5px;
+		padding: 5px;
+	}
+
 	.badge-container img{
 		width: 60px;
 		height: auto;
+		box-shadow: 5px 5px 5px var(--secondary-color);
+		border: solid 5px white;
+		border-radius: 5px;
+		padding: 5px;
 	}
 
     #imageContainer {
