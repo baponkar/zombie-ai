@@ -22,7 +22,11 @@
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
          <!--Lottie Library-->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+         <!--script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script-->
+         <!--script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script-->
+         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+         
+         
 
          <!--Image Animation cdn-->
          <!--codepen link https://codepen.io/nathan-sr/pen/JjqERpE -->
@@ -43,15 +47,21 @@
 
 
    <body>
+
     <div id="loading">
-        <div id="lottie"></div>
+        <h1 class="typewritter">
+            <span class="text-wrapper">
+            <span class="letters">Loading...Please Wait....</span>
+            <span class="line"></span>
+            </span>
+        </h1>
     </div>
 
-    <div id="readingProgress"></div>
-    <button id="goTopButton" onclick="goToTop()">Go to Top</button>
-    <button id="goBottomButton" onclick="goToBottom()">Go to Bottom</button>
 
     <div id="content">
+        <div id="readingProgress"></div>
+        <button id="goTopButton" onclick="goToTop()">Go to Top</button>
+        <button id="goBottomButton" onclick="goToBottom()">Go to Bottom</button>
         <div class="banner">
             <div class="image-container">
                 <img id="animatedImage" src="ScreenShots/Social_pic.png" alt="Social Picture Banner" >

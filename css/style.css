@@ -181,12 +181,13 @@ li{
 
 /* Center the loader */
 #loading {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: white;
+	
+	width: 90%;
+	height: auto;
+	background: var(--blue-background-color);
 	display: flex;
 	justify-content: center;
+	margin: auto;
 	align-items: center;
 	z-index: 1000;
   }
