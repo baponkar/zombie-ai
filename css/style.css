@@ -465,6 +465,10 @@ li{
 }
 
 
+
+
+
+
 /* Add media query for Realme Narzo 30 Pro 1080  */
 @media screen and (max-width: 1080px) {
     .page-container {
@@ -496,7 +500,6 @@ li{
 	.badge-container img{
 		width: 80px;
 		height: auto;
-		box-shadow: 1px 1px 1px var(--secondary-color);
 		padding: 1px;
 	}
 
