@@ -10,6 +10,8 @@ function showImage(index) {
     updateDots(index);
     setTimeout(() => {
         currentIndex = (index + 1) % totalImages;
+        // previousIndex = currentIndex - 1;
+        // showImage(previousIndex)
         showImage(currentIndex);
     }, 2000); // Display each image for 2 seconds
 }

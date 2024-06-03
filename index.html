@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Zombie Ai for unity</title>
 		<link href="css/style.css" rel="stylesheet">
         <link href="favicon.ico" rel="icon" type="image/icon">
@@ -21,6 +23,21 @@
 
          <!--Lottie Library-->
          <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+
+         <!--Image Animation cdn-->
+         <!--codepen link https://codepen.io/nathan-sr/pen/JjqERpE -->
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://jaysalvat.github.io/vegas/releases/latest/vegas.js'></script> 
+
+        <!--MathJax-->
+        <!-- Load MathJax from CDN -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <!--Prism to show colorful code-->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/prism.js"></script>
+
 	</head>
 
 
@@ -29,6 +46,10 @@
     <div id="loading">
         <div id="lottie"></div>
     </div>
+
+    <div id="readingProgress"></div>
+    <button id="goTopButton" onclick="goToTop()">Go to Top</button>
+    <button id="goBottomButton" onclick="goToBottom()">Go to Bottom</button>
 
     <div id="content">
         <div class="banner">
@@ -44,37 +65,44 @@
             </h1>
         </div>
 
+        
 
         <div class="page-container">
-            <!--Badges-->
-            <a href="https://unity.com/releases/editor/whats-new/2020.3.0">
-                <img src="https://img.shields.io/badge/Unity-2020-maker?logo=unity" alt="Unity Badge">
-            </a>
-            <img src="https://img.shields.io/badge/FPS-for%20Unity-blue" alt="FPS">
-            <img src="https://img.shields.io/badge/C%23-maker?logo=csharp" alt="CSharp Badge">
-            <a href="https://github.com/baponkar/zombie-ai/issues">
-                <img src="https://img.shields.io/github/issues/baponkar/zombie-ai" alt="Issue">
-            </a>
-            <a href="https://github.com/baponkar/zombie-ai/forks">
-                <img src="https://img.shields.io/github/forks/baponkar/zombie-ai" alt="fork">
-            </a>
-            <a href="https://github.com/baponkar/zombie-ai/stargazers">
-                <img src="https://img.shields.io/github/stars/baponkar/zombie-ai" alt="star">
-            </a>
-            <a href="https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md">
-                <img src="https://img.shields.io/github/license/baponkar/zombie-ai" alt="License">
-            </a>
-            <a href="https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf">
-                <img src="https://img.shields.io/badge/%F0%9F%93%96%20wiki-maker?style=flat-square&amp;logo=pdf&amp;labelColor=blue&amp;color=blue" alt="Wiki Badge">
-            </a>
-            <a href="https://baponkar.github.io/zombie-ai">
-                <img src="ScreenShots/share_icon.png" alt="Share icon" width="20" height="20">
-            </a>
-            <a href="https://github.com/baponkar/zombie-ai?tab=readme-ov-file">
-                <img src="https://img.shields.io/badge/Fork-me-maker?logo=github&logoColor=black&color=white&cacheSeconds=green" alt="fork me badge">
-            </a>
+            <div class="badge-container">
+                <!--Badges-->
+                <a href="https://unity.com/releases/editor/whats-new/2020.3.0">
+                    <img src="https://img.shields.io/badge/Unity-2020-maker?style=plastic&logo=unity&logoSize=small&labelColor=blue&color=black" alt="Unity Badge">
+                </a>
+                <a href="https://dotnet.microsoft.com/en-us/languages/csharp">
+                    <img style="width: 8%;"
+                    src="https://img.shields.io/badge/C-%23-maker?style=plastic&logo=csharp&logoSize=small&labelColor=blue&color=black" alt="CSharp Badge">
+                </a>
+                <a href="https://github.com/baponkar/Simple-FPS">
+                    <img src="https://img.shields.io/badge/FPS-Unity-maker?style=plastic&logo=unity&logoSize=small&labelColor=blue&color=black" alt="FPS">
+                </a>
+                <a href="https://github.com/baponkar/zombie-ai/issues">
+                    <img src="https://img.shields.io/github/issues/baponkar/zombie-ai" alt="Issue">
+                </a>
+                <a href="https://github.com/baponkar/zombie-ai/forks">
+                    <img src="https://img.shields.io/github/forks/baponkar/zombie-ai" alt="fork">
+                </a>
+                <a href="https://github.com/baponkar/zombie-ai/stargazers">
+                    <img src="https://img.shields.io/github/stars/baponkar/zombie-ai" alt="star">
+                </a>
+                <a href="https://github.com/baponkar/zombie-ai/blob/main/LICENSE.md">
+                    <img src="https://img.shields.io/github/license/baponkar/zombie-ai" alt="License">
+                </a>
+                <a href="https://github.com/baponkar/zombie-ai/blob/main/Assets/__baponkar__/Tutorials.pdf">
+                    <img src="https://img.shields.io/badge/Wiki-Page-maker?style=plastic&logo=wikipage&logoSize=small&labelColor=blue&color=black" alt="Wiki Badge">
+                </a>
+                <a href="https://github.com/baponkar/zombie-ai?tab=readme-ov-file">
+                    <img src="https://img.shields.io/badge/Fork-me-maker?logo=github&logoColor=black&color=white&cacheSeconds=green" alt="fork me badge">
+                </a>
+            </div>
 
             <hr>
+
+        
             
             <h2>Description : </h2>
             <p>A Fully State Machine and ~Behavior Tree~  controlled advanced Zombie Non Playable Character(NPC) or AI for Unity Project with a Demo Scene.You can use this asset for your Game development.You can use the given states or introduced your own new state then you need to import the corresponding state animation and state transition logic. You also can use the zombie prefab for any kind mesh character by importing corresponding mesh and animation.</p>
@@ -90,12 +118,20 @@
                         </a>
                     </p>
                 </li>
+
+                <div class="video-container">
+                    <iframe width="500" height="300" src="https://www.youtube.com/watch?v=JxbXT3MU_9M?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             
                 <li>
                     <p>
                         <a href="https://www.youtube.com/watch?v=486w7NuyBWo"><img src="https://img.shields.io/badge/youtube%20demo-1.0.0-maker?style=flat-square&amp;logo=YouTube&amp;logoColor=red&amp;color=red" alt="YouTube demo Badge"></a>
                     </p>
                 </li>
+
+                <div class="video-container">
+                    <iframe width="500" height="300" src="https://www.youtube.com/watch?v=486w7NuyBWo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </ul>
 
             <h2>Latest Stable release : </h2>
@@ -107,7 +143,7 @@
             
             <hr>
             
-            <h2>Roughly It has following Characteristics : </p>
+            <h2>Roughly It has following Characteristics : </h2>
             
             <ul>
                 <li>
@@ -204,6 +240,14 @@
 
             <h2 classid="behavior-tree-">Behavior Tree:</h2>
             <p>I have dropped this feature.</p>
+
+            <div class="imageContainer">
+               <img src="ScreenShots/behavior_tree.png" alt="Flowchart of State transition" width="300" height="auto">   
+            </div>
+
+            <hr>
+
+            <h2 classid="behavior-tree-">State Transition:</h2>
 
             <div class="imageContainer">
                 <a href="https://colab.research.google.com/drive/14w90fm0O1CPNVTPYqNnic9xqHehyHnAs?usp=sharing">
@@ -307,9 +351,19 @@
 
             <p>Zombie sensor sense "Character" Layer for this NPCSensoryMemory.cs Script.Find <strong>&quot;NPCSensoryMemory.cs&quot;</strong> Script inside Scripts folder i.e.</p>
             
-            <p style="background-color: black; padding: 5px;"> 
-                "Zombie_Ai/Assets/Zombie_ai/Zombie_NPC/ Scripts/NPCSensoryMemory.cs"
-            </p>
+
+            <div class="codebox"> 
+                <header>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </header>
+                <pre>
+                    <code class="language-bash">
+                        $ cd Zombie_Ai/Assets/Zombie_ai/Zombie_NPC/ Scripts/NPCSensoryMemory.cs
+                    </code>
+                </pre>
+            </div>
             
             <div class="codebox">
                 <header>
@@ -320,17 +374,17 @@
 
                 <!---->
                 <pre>
-                <code >
-                    <!---->
-                    {
-                        int targets = sensor.Filter(characters, 'TargetLayer');
-                        //Here put the player layer name in 'TargetLayer'
-                        //Here I have use 'Character' as Player Object Layer is that.
-                        void UpdateSenses(NPCVisionSensor sensor)
-                        ....
-                    }
-                    <!---->
-                </code>
+                    <code class="language-csharp">
+                        <!---->
+                        {
+                            int targets = sensor.Filter(characters, 'TargetLayer');
+                            //Here put the player layer name in 'TargetLayer'
+                            //Here I have use 'Character' as Player Object Layer is that.
+                            void UpdateSenses(NPCVisionSensor sensor)
+                            ....
+                        }
+                        <!---->
+                    </code>
                 </pre>
             </div>
 
@@ -405,10 +459,20 @@
                 
             <h2 id="contact-">Contact:</h2>
             <div class="center">
-                <p><img src="https://img.shields.io/badge/Gmail-baponkar%40gmail.com-red?logo=gmail" alt="Gmail">
-                <a href="https://x.com/kar_bapon"><img src="https://img.shields.io/badge/X-%40baponkar-maker?logo=x&amp;logoColor=black&amp;labelColor=red&amp;color=black" alt="X"></a>
-                <a href="https://in.linkedin.com/in/bapon-kar-815098200"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
-                <a href="https://youtube.com/@gamingjam8394?si=cElodqeKqe5PgX_o"><img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&amp;logoColor=white" alt="YouTube"></a></p>
+                <div class="badge-container">
+                    <a href="mailto:baponkar@gmail.com">
+                        <img src="https://img.shields.io/badge/Gmail-maker?style=plastic&logo=gmail&logoSize=small&labelColor=blue&color=black" alt="Gmail">
+                    </a>
+                    <a href="https://x.com/kar_bapon">
+                        <img src="https://img.shields.io/badge/-x.com-maker?style=plastic&logo=x&logoSize=small&labelColor=blue&color=black" alt="X">
+                    </a>
+                    <a href="https://in.linkedin.com/in/bapon-kar-815098200">
+                        <img src="https://img.shields.io/badge/-LinkedIn-maker?style=plastic&logo=linkedin&logoSize=small&labelColor=blue&color=black" alt="LinkedIn">
+                    </a>
+                    <a href="https://youtube.com/@gamingjam8394?si=cElodqeKqe5PgX_o">
+                        <img src="https://img.shields.io/badge/-Youtube-maker?style=plastic&logo=youtube&logoSize=small&labelColor=blue&color=black" alt="YouTube">
+                    </a>
+                </div>
             </div>
 
             <hr>
@@ -418,6 +482,8 @@
             </div>
 
             <hr>
+
+            <p style="font-size: 10px;">\[ a^2+b+c=0 \]</p>
             
         </div>
     </div>
@@ -428,7 +494,8 @@
     <script src="js/slide_show.js"></script>
     <script src="js/banner_image_anim.js"></script>
     <script src="js/page_loading_animation.js"></script>
-
+    <script src="js/read_percentage.js"></script>
+    <script src="js/go_top_bottom.js"></script>
    </body>
 
 </html>
